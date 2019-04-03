@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<title>캘로그 코리아</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Black+Han+Sans|Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+
+	<link href="css/main.css" rel=stylesheet type="text/css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script>
+		//intro effect
+		$(document).ready(function() {
+			var headeroffset = $('#header_wrap').offset().top;
+
+			$(window).scroll(function() {
+				var scrollpos = $(window).scrollTop();
+
+
+				if (scrollpos > headeroffset) {
+					$('.header_line_2').css({
+						'position': 'fixed',
+						'top': '0',
+						'box-shadow': '1px 1px 2px #d9d9d9',
+						'width': '100%',
+						'background-color': 'rgba(255, 255, 255, 0.8)'
+					})
+
+
+				} else {
+					$('.header_line_2').css({
+						'position': 'relative',
+						'z - index': '1',
+						'box-shadow': 'none',
+						'width': 'auto',
+						'background': 'none',
+						'width': '100%'
+					})
+				}
+			})
+
+			var wScroll = $(this).scrollTop();
+			if (wScroll > $('.header_line_2_yt_text').offset().top - ($(window).height() / 2)) {
+
+				$('.header_line_2_yt_text h3').css({
+					'opacity': '1',
+					'transform': 'translateY(120px)'
+				})
+
+				$('.header_line_2_yt_text dl').css({
+					'opacity': '1',
+					'transform': 'translateY(140px)'
+				})
+			}
+		})
+
+
+		//gnb
+		$(document).ready(function() {
+			$('.header_line_2_menu_sub').hide();
+
+			$('.header_line_2_menu_ul > li > a').mouseenter(function() {
+				$(this).css('border-bottom', '2px solid #C4203B')
+				$(this).css('color', '#C4203B')
+			})
+
+			$('.header_line_2_menu_ul > li > a').mouseleave(function() {
+				$(this).css('border-bottom', 'none')
+				$(this).css('color', '#666')
+			})
+
+
+			$('.header_line_2_menu_sub').on({
+				mouseenter: function() {
+					$('.header_line_2_menu_ul > li:eq(' + $(this).parent().index() + ') > a').css('color', '#C4203B')
+					$('.header_line_2_menu_ul > li:eq(' + $(this).parent().index() + ') > a').css('border-bottom', '2px solid #C4203B')
+				},
+
+				mouseleave: function() {
+					$('.header_line_2_menu_ul > li:eq(' + $(this).parent().index() + ') > a').css('color', '#666')
+					$('.header_line_2_menu_ul > li:eq(' + $(this).parent().index() + ') > a').css('border-bottom', 'none')
+				}
+
+			})
+
+			$('.header_line_2_menu_ul li').click(function() {
+				$('.header_line_2_menu_sub, .event_newProduct').slideToggle();
+
+			})
+
+			$('.event a, .event a img').mouseenter(function() {
+				$('.textEvent').animate({
+					bottom: '0px'
+				}, 500)
+			})
+
+			$('.event a, .event a img').mouseleave(function() {
+				$('.textEvent').animate({
+					bottom: '-55px'
+				}, 500)
+			})
+
+			$('.newProduct a, .newProduct iframe').mouseenter(function() {
+				$('.textNew').animate({
+					bottom: '0px'
+				}, 500)
+			})
+
+			$('.newProduct a, .newProduct iframe').mouseleave(function() {
+				$('.textNew').animate({
+					bottom: '-55px'
+				}, 500)
+			})
+		})
+
+
+		//pick your taste
+
+		$(document).ready(function() {
+
+			$(".header_line_2_yt_text").hide();
+			$(".header_line_2_yt_text").fadeIn(1000);
+
+			setTimeout(function() {
+				$(".header_line_2_yt_text").fadeIn(1000);
+			}, 1000);
+			setTimeout(function() {
+				$(".header_line_2_yt_text").fadeOut(1000);
+			}, 5500);
+
+
+
+			$(document).ready(function() {
+
+				$(".link_fadeIn li a").hide();
+				$(".link_fadeIn li a").fadeOut(1000);
+
+				setTimeout(function() {
+					$(".link_fadeIn li a").fadeIn(1500);
+				}, 6000);
+			})
+		})
+	
+
+
+
+		//Introducint New
+		$(document).ready(function() {
+			$('.container_Introducing_prevBtn').click(function() {
+				$('.container_Introducing_ul').prepend($('.container_Introducing_ul li:last'));
+				$('.container_Introducing_ul').css('left', '-525px');
+				$('.container_Introducing_ul').animate({
+					left: '0'
+				}, 1000);
+			})
+
+
+			$('.container_Introducing_nextBtn').click(function() {
+				$('.container_Introducing_ul').animate({
+					left: '-525px'
+				}, 1000, function() {
+					$('.container_Introducing_ul').append($('.container_Introducing_ul li:first'));
+					$('.container_Introducing_ul').css('left', '0');
+				})
+			})
+		})
+
+		//NEWS ROLLING
+		$(document).ready(function() {
+
+			var st;
+			st = setInterval(auto, 1000);
+
+			$('.container_notice_prev').click(function(e) {
+				e.preventDefault();
+				clearInterval(st);
+				$('.container_notice_ul').prepend($('.container_notice_ul li:last-child'))
+			})
+
+
+			$('.container_notice_next').click(function(e) {
+				e.preventDefault();
+				clearInterval(st);
+				$('.container_notice_ul').append($('.container_notice_ul li:first-child'))
+			})
+
+			$('.container_notice_stop').click(function(e) {
+				clearInterval(st);
+				e.preventDefault();
+
+
+				$(this).css('display', 'none')
+				$('.container_notice_play').css('display', 'block')
+				clearInterval(st);
+
+			})
+			$('.container_notice_play').click(function(e) {
+				e.preventDefault();
+				clearInterval(st);
+
+				$(this).css('display', 'none')
+				$('.container_notice_stop').css('display', 'block')
+				st = setInterval(auto, 1000);
+			})
+
+
+		})
+
+
+		function auto() {
+			$('.container_notice ul').animate({
+				top: '-100px'
+			}, 3000, function() {
+				$('.container_notice ul').append($('.container_notice_ul li:first-child'));
+				$('.container_notice ul').css('top', '0');
+			})
+		}
+
+
+
+		////our brands 	
+		function init() {
+
+
+			var currentNum = 0;
+			var menuNum = 0;
+
+			var filterUl = document.getElementById('tabContainer'); //큰 ul
+			var filterTab = document.getElementsByClassName('tab_click');
+			var filterCon = filterUl.getElementsByTagName('ul'); //작은 ul img
+
+			for (var i = 0; i < filterTab.length; i++) {
+				filterTab[i].getElementsByTagName('a')[0].num = i;
+				filterTab[i].getElementsByTagName('a')[0].onmouseover = function() {
+					if (currentNum != this.num) {
+
+						filterCon[currentNum].style.display = 'none';
+						filterCon[this.num].style.display = 'block';
+
+						currentNum = this.num
+					}
+				}
+			}
+
+
+
+			//			$('.container_ourBrands_logo').mouseover(function() {
+			//				$('.container_ourBrands_filter > li:eq(' + $(this).parent().index() + ') > a').css('backgroundColor', '#000')
+			//			})
+			//
+			//			$('.container_ourBrands_logo').mouseleave(function() {
+			//				$('.container_ourBrands_filter > li:eq(' + $(this).parent().index() + ') > a').css('backgroundColor', '#d9d9d9')
+			//			})
+		}
+		window.onload = init;
+	</script>
+
+
+
+
+</head>
+
+<body>
+
+	<div id="skipMenu">
+		<a href="#container">본문바로가기</a>
+		<a href="#gnb">gnb바로가기</a>
+	</div><!-- skipMenu -->
+
+
+
+	<div id="wrap_1">
+
+
+		<header id="header_wrap">
+			<h1 class="logo"><img src="images/Kellogg's%20logo%202012(2).png" alt="켈로그 로고" width="205" height="80" /></h1>
+
+			<div class="header_line_1">
+
+				<div class="header_line_1_menu margin_a">
+					<ul class="header_line_1_menu_ul">
+						<li><a href="#">Sign In</a></li>
+						<li><a href="#">Customer Service</a></li>
+						<li class="selectBox">
+							<form method="post" action="#" name="frm">
+								<fieldset>
+									<legend>언어선택</legend>
+									<label for="language">언어선택</label>
+									<select id="language" name="language">
+										<option value="">Language</option>
+										<option value="">한국어 (Koren)</option>
+										<option value="">영어 (English)</option>
+									</select>
+								</fieldset>
+							</form>
+						</li>
+						<!--selectBox-->
+					</ul>
+				</div>
+			</div>
+			<!--header_line_1-->
+
+
+			<div class="header_line_2">
+				<section class="header_line_2_menu_section">
+					<h3 class="skip">gnb_menu</h3>
+					<ul class="header_line_2_menu_ul" id="header_line_2_menu_ul">
+						<li><a href="#">회사소개</a>
+							<ul class="header_line_2_menu_sub">
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">회사개요</a></li>
+								<li><a href="#">회사연혁</a></li>
+								<li><a href="#">찾아오시는길</a></li>
+							</ul>
+						</li>
+						<li> <a href="#">켈로그 브랜드 </a>
+							<ul class="header_line_2_menu_sub">
+								<li><a href="#">스페셜K</a></li>
+								<li><a href="#">첵스초코</a></li>
+								<li><a href="#">콘푸로스트</a></li>
+								<li><a href="#">콘푸레이크</a></li>
+								<li class="sub_all"><a href="#">모두보기 ></a> </li>
+							</ul>
+						</li>
+						<li> <a href="#">레시피</a>
+							<ul class="header_line_2_menu_sub">
+								<li><a href="#">코코아 딸기 파이</a></li>
+								<li><a href="#">와플 샌드위치</a></li>
+								<li><a href="#">후르츠 피자</a></li>
+								<li><a href="#">토마토 샐러드</a></li>
+								<li class="sub_all"><a href="#">모두보기 ></a></li>
+							</ul>
+						</li>
+						<li> <a href="#">사회공헌</a>
+							<ul class="header_line_2_menu_sub">
+								<li><a href="#">캘로그 캠페인</a></li>
+								<li><a href="#">캘로그의 약속</a></li>
+								<li><a href="#">캘로그의 가치</a></li>
+							</ul>
+
+						</li>
+					</ul>
+				</section>
+
+				<section class="event_newProduct">
+					<h3 class="skip">이벤트, 신제품 소개</h3>
+					<article class="event">
+						<h3>EVENT</h3>
+						<a href="#" class="textEvent">켈로그 콘푸레이크 구매하세요!<br /> 빈티지 컬렉션 사은품을 드립니다!</a>
+						<a href="#"><img src="images/vintage_kelloggs_1.jpg" alt="신제품 "></a>
+					</article>
+					<!--EVENT-->
+
+					<article class="newProduct">
+						<h3>NEW PRODUCT</h3>
+						<a href="#" class="textNew">날먹 vs 말먹<br />켈로그 신제품 허쉬초코크런치를 더 맛있게 먹는 방법은?</a>
+						<iframe width="600px" height="300px" src="https://www.youtube.com/embed/9D-7UXCarZU?autoplay=1;loop=1&playlist=9D-7UXCarZU;controls=0;start=4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</article>
+					<!--EVENT-->
+				</section>
+			</div>
+			<!--header_line_2-->
+
+
+		</header>
+
+
+		<div class="container_wrap">
+			<section class="header_line_2_yt">
+				<h3 class="skip">캘 로 그</h3>
+
+				<div class="header_line_2_yt_visual">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/XUJKi5dJG08?autoplay=1;start=12;loop=1&playlist=XUJKi5dJG08;controls=0;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
+				<article class="header_line_2_yt_text">
+					<h3>Pick Your Taste!</h3>
+					<dl>
+						<dt>매일 아침 함께하고 싶은 시리얼은 어떤 제품인가요?</dt>
+						<dd>당신에게 가장 잘 맞는 제품을 찾아보세요!</dd>
+					</dl>
+
+					<ul>
+						<li><a href="#">전체상품 보러가기</a></li>
+					</ul>
+				</article>
+
+				<article>
+					<h3 class="skip">전체상품 보러가기</h3>
+					<ul class="link_fadeIn">
+						<li><a href="#">전체상품 보러가기</a></li>
+					</ul>
+				</article>
+
+			</section>
+
+			<section class="container_quickMenu ">
+				<div class="container_quickMenu_1 fix">
+					<h3><span class="number">1.</span>브랜드 소개</h3>
+					<p>씨앗에서 식탁까지 Nutritional Benefits of Grains.<br /> 켈로그의 철학은 단순 명료합니다. 최고를 제공함으로써 <br /> 고객을 최고로 만들 수 있다는 것입니다.</p>
+					<p class="container_quickMenu_more"><a href="#">LEARN MORE</a></p>
+				</div>
+				<div class="container_quickMenu_2 fix">
+					<h3><span class="number">2.</span>신제품 소개</h3>
+					<p>씨앗에서 식탁까지 Nutritional Benefits of Grains.<br /> 켈로그의 철학은 단순 명료합니다. 최고를 제공함으로써 <br /> 고객을 최고로 만들 수 있다는 것입니다.</p>
+					<p class="container_quickMenu_more"><a href="#">LEARN MORE</a></p>
+				</div>
+				<div class="container_quickMenu_3 fix">
+					<h3><span class="number">3.</span>레시피 소개</h3>
+					<p>씨앗에서 식탁까지 Nutritional Benefits of Grains.<br /> 켈로그의 철학은 단순 명료합니다. 최고를 제공함으로써 <br /> 고객을 최고로 만들 수 있다는 것입니다.</p>
+					<p class="container_quickMenu_more"><a href="#">LEARN MORE</a></p>
+				</div>
+
+			</section>
+
+
+
+			<section class="container_Introducing fix">
+				<h3>INTRODUCING NEW</h3>
+				<div class="container_Introducing_div">
+					<ul class="container_Introducing_ul fix">
+						<li>
+							<dl>
+								<dt>Cereal</dt>
+								<dd><img src="images/main_new_itm_1.png" alt="스페셜케이" width="200px"></dd>
+								<dd>스페셜K 초콜릿 아몬드</dd>
+							</dl>
+							<div class="button">
+								<p class="item_more"><a href="#">자세히보기</a></p>
+							</div>
+
+						</li>
+						<li>
+							<dl>
+								<dt>Bars</dt>
+								<dd><img src="images/Choco-Bakes-620x330.png" alt="코코베이크" width="400px"></dd>
+								<dd>코코팝 초코베이크</dd>
+							</dl>
+							<div class="button">
+								<p class="item_more"><a href="#">자세히보기</a></p>
+							</div>
+						</li>
+						<li>
+							<dl>
+								<dt>Beverages</dt>
+								<dd><img src="images/81lpw0GfarL.png" alt="스페셜케이" width="300px"></dd>
+								<dd>스페셜K 프로틴드링크</dd>
+							</dl>
+							<div class="button">
+								<p class="item_more"><a href="#">자세히보기</a></p>
+							</div>
+						</li>
+						<li>
+							<dl>
+								<dt>Cereal</dt>
+								<dd><img src="images/main_new_itm_1.png" alt="스페셜케이" width="200px"></dd>
+								<dd>스페셜K 초콜릿 아몬드</dd>
+							</dl>
+							<div class="button">
+								<p class="item_more"><a href="#">자세히보기</a></p>
+							</div>
+
+						</li>
+						<li>
+							<dl>
+								<dt>Bars</dt>
+								<dd><img src="images/Choco-Bakes-620x330.png" alt="코코베이크" width="400px"></dd>
+								<dd>코코팝 초코베이크</dd>
+							</dl>
+							<div class="button">
+								<p class="item_more"><a href="#">자세히보기</a></p>
+							</div>
+						</li>
+						<li>
+							<dl>
+								<dt>Beverages</dt>
+								<dd><img src="images/81lpw0GfarL.png" alt="스페셜케이" width=300px;></dd>
+								<dd>스페셜K 프로틴드링크</dd>
+							</dl>
+							<div class="button">
+								<p class="item_more"><a href="#">자세히보기</a></p>
+							</div>
+						</li>
+					</ul>
+
+
+				</div>
+
+				<div class="container_Introducing_btn">
+					<span class="container_Introducing_prevBtn"><a href="#">이전</a></span>
+					<span class="container_Introducing_nextBtn"><a href="#">다음</a></span>
+				</div>
+
+
+
+
+
+			</section>
+			<!--"container_Introducing"-->
+
+			<article class="container_notice fix">
+				<h3>KELLOGG'S NEWS</h3>
+				<ul class="container_notice_ul">
+					<li><a href="#">110년, 좋은 아침 식사를 위한 노력 시리얼의 원조, 켈로그</a></li>
+					<li><a href="#">켈로그와 함께하는 가족여행 – 강원도편</a></li>
+					<li><a href="#">캘로그 x LINE 콜라보레이션! 피규어를 만나보세요</a></li>
+					<li><a href="#">신제품 &raquo; 오곡으로 만든 첵스초코 스노우 초코볼 출시!</a></li>
+					<li><a href="#">신제품 &raquo; 시리얼의 대명사 켈로그와 초콜릿의 대명사 허쉬의 만남으로...</a></li>
+				</ul>
+
+				<span class="container_notice_prev"><a href="#">이전보기</a></span>
+				<span class="container_notice_stop"><a href="#">STOP</a></span>
+				<span class="container_notice_next"><a href="#">다음보기</a></span>
+				<span class="container_notice_play"><a href="#">PLAY</a></span>
+
+			</article>
+
+
+
+			<div class="container_ourBrands_backbg"></div>
+
+			<section class="container_ourBrands fix">
+				<h3>OUR BRANDS</h3>
+				<ul class="container_ourBrands_filter" id="tabContainer">
+					<p>FILTER BY</p>
+
+					<li class="tab_click"><a href="#">전체 브랜드</a>
+						<ul class="container_ourBrands_logo">
+							<li><a href="#"><img src="images/kellogg-logo_pringles.png" alt="프링글스" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_specialK.png" alt="스페셜케이" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_cheezit.png" alt="치즈잇" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_pop.png" alt="팝타르트 " /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_corn.png" alt="콘프레이크" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_crunchy.png" alt="크런키너트" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_eggo.png" alt="이고" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_froot.png" alt="후르트링" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_frosted.png" alt="프로스티드플레이크" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_riceK.png" alt="라이스크리스피" /></a></li>
+
+
+							<li><a href="#"><img src="images/kellogg-logo_stretch.png" alt="유기농 스트레치 아일랜드" /></a></li>
+
+						</ul>
+
+
+					</li>
+
+					<li class="tab_click"><a href="#">프로틴/영양</a>
+						<ul class="container_ourBrands_logo logo_off">
+
+							<li><a href="#"><img src="images/kellogg-logo_specialK.png" alt="스페셜케이" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_pop.png" alt="팝타르트 " /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_corn.png" alt="콘프레이크" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_frosted.png" alt="프로스티드플레이크" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_stretch.png" alt="유기농 스트레치 아일랜드" /></a></li>
+
+						</ul>
+
+					</li>
+
+					<li class="tab_click"><a href="#">식이섬유 제품</a>
+						<ul class="container_ourBrands_logo logo_off">
+							<li><a href="#"><img src="images/kellogg-logo_specialK.png" alt="스페셜케이" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_pop.png" alt="팝타르트 " /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_corn.png" alt="콘프레이크" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_crunchy.png" alt="크런키너트" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_froot.png" alt="후르트링" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_frosted.png" alt="프로스티드플레이크" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_stretch.png" alt="유기농 스트레치 아일랜드" /></a></li>
+
+						</ul>
+					</li>
+					<li class="tab_click"><a href="#">NEW</a>
+						<ul class="container_ourBrands_logo logo_off">
+							<li><a href="#"><img src="images/kellogg-logo_pringles.png" alt="프링글스" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_cheezit.png" alt="치즈잇" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_pop.png" alt="팝타르트 " /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_crunchy.png" alt="크런키너트" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_eggo.png" alt="이고" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_frosted.png" alt="프로스티드플레이크" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_stretch.png" alt="유기농 스트레치 아일랜드" /></a></li>
+
+						</ul>
+					</li>
+					<li class="tab_click"><a href="#">아침식사용 제품</a>
+						<ul class="container_ourBrands_logo logo_off">
+
+							<li><a href="#"><img src="images/kellogg-logo_specialK.png" alt="스페셜케이" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_pop.png" alt="팝타르트 " /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_corn.png" alt="콘프레이크" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_crunchy.png" alt="크런키너트" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_eggo.png" alt="이고" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_froot.png" alt="후르트링" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_frosted.png" alt="프로스티드플레이크" /></a></li>
+
+							<li><a href="#"><img src="images/kellogg-logo_stretch.png" alt="유기농 스트레치 아일랜드" /></a></li>
+
+						</ul>
+					</li>
+					<li class="tab_click"><a href="#">채식주의</a>
+						<ul class="container_ourBrands_logo logo_off">
+							<li><a href="#"><img src="images/kellogg-logo_stretch.png" alt="유기농 스트레치 아일랜드" /></a></li>
+
+						</ul>
+					</li>
+				</ul>
+
+				<p class="more"><a href="#">+MORE</a></p>
+
+
+			</section>
+			<!--"container_ourBrands"-->
+
+
+			<section class="container_tastyRecipes_1 fix">
+
+				<h3>TASTY RECIPES</h3>
+
+
+				<div class="container_tastyRecipes_d2">
+
+					<ul>
+
+						<li> <a href="#"><img src="images/rec_1.png" alt="" /> </a></li>
+						<li> <a href="#">레시피제목 </a></li>
+						<li> <a href="#">사용제품:켈로그 스페셜 케이 </a></li>
+
+
+					</ul>
+
+					<p class="layer">
+						<span class="time">소요시간 : 15분</span>
+						<span class="level">난이도 : 하</span>
+						<span><a href="#">자세히보기</a></span>
+					</p>
+				</div>
+
+				<div class="container_tastyRecipes_d2">
+
+					<ul>
+
+						<li><a href="#"><img src="images/rec_2.png" alt="" /> </a></li>
+						<li><a href="#">레시피제목 </a></li>
+						<li><a href="#">사용제품:켈로그 스페셜 케이 </a></li>
+
+					</ul>
+
+					<p class="layer">
+						<span class="time">소요시간 : 15분</span>
+						<span class="level">난이도 : 하</span>
+						<span><a href="#">자세히보기</a></span>
+					</p>
+				</div>
+
+				<div class="container_tastyRecipes_d2">
+
+					<ul>
+
+						<li><a href="#"><img src="images/rec_3.png" alt="" /></a></li>
+						<li><a href="#">레시피제목</a></li>
+						<li><a href="#">사용제품:켈로그 스페셜 케이</a></li>
+
+					</ul>
+
+					<p class="layer">
+						<span class="time">소요시간 : 15분</span>
+						<span class="level">난이도 : 하</span>
+						<span><a href="#">자세히보기</a></span>
+					</p>
+				</div>
+
+				<div class="container_tastyRecipes_d2">
+
+					<ul>
+
+						<li><a href="#"><img src="images/rec_4.png" alt="" /> </a></li>
+						<li><a href="#">레시피제목 </a></li>
+						<li><a href="#">사용제품:켈로그 스페셜 케이 </a></li>
+
+					</ul>
+
+					<p class="layer">
+						<span class="time">소요시간 : 15분</span>
+						<span class="level">난이도 : 하</span>
+						<span><a href="#">자세히보기</a></span>
+					</p>
+				</div>
+
+				<p class="more"><a href="#">+MORE</a></p>
+
+			</section>
+
+			<section class="container_sns">
+				<h3 class="skip">켈로그 sns</h3>
+				<section class="sns_wrap">
+					<h3>Join the conversation with Kellogg !</h3>
+					<div class="sns fix">
+						<a href="#"><img src="images/main_sns_1.png" alt="페이스북" width="55px" /></a>
+						<a href="#"><img src="images/main_sns_2.png" alt="인스타그램" width="55px" /></a>
+						<a href="#"><img src="images/main_sns_3.png" alt="트위터" width="55px" /></a>
+						<a href="#"><img src="images/main_sns_4.png" alt="링트인" width="55px" /></a>
+						<a href="#"><img src="images/main_sns_5.png" alt="구글플러스" width="55px" /></a>
+					</div>
+				</section>
+			</section>
+
+
+		</div>
+		<!--container_wrap-->
+
+
+		<footer>
+
+
+			<section class="footer_menu_wrap">
+
+
+				<h3 class="skip">하단메뉴</h3>
+				<div class="footer_menu fix">
+					<ul>
+						<li><a href="#">Sitemap</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Our Story</a></li>
+						<li><a href="#">Promotions</a></li>
+						<li><a href="#">Recipes</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Terms</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Careers</a></li>
+					</ul>
+					<p> &copy; 2018, Trademark of Kellogg Company used under licence by Kellogg Korea Inc.</p>
+				</div>
+			</section>
+
+		</footer>
+
+
+
+
+	</div>
+	<!--"wrap_1"-->
+
+
+</body></html>
