@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+#footerWrap {
+    background: #0a2b40;
+   width: 1200px;
+    margin: 0 auto;
+    padding: 20px;   
+}
+
+.footerUl {
+    width: 1200px;
+    margin: 15px auto;
+    overflow: hidden
+}
+
+.footerUl li { 
+    float: left;
+    padding:0 9px;
+    color: #fff;
+    font-size: 15px;
+    border-left: 1px solid #fff;
+}
+
+.footerUl li a {
+    color: #fff
+}
+
+.footerUl li:first-child {
+    border-left: none;
+}
+
+.personalinfo li a {
+    color: #f00;
+}
+
+.footerText {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.footerLogo img{
+   
+    float:left;
+    width:300px; 
+    height: 74px;
+    margin-right:100px;
+}
+
+address,
+.footer_p {
+    color: #fff;
+    line-height: 2;
+}
+
+address{font-style: normal}
+
+
+.footerSelect {
+    width: 1200px;
+    margin: 10px auto;
+    padding: 20px 0;
+    overflow: hidden
+}
+
+.footer_select_1 {
+    margin-left: 0;
+}
+
+.footerSelect  ul
+ {
+    width: 350px;
+    height: 50px;
+    margin-left: 20px;
+    background: #0f3d5c;
+    color: #fff;
+    padding-left: 20px;
+    border: 2px solid #fff;
+    border:none;
+     float:left;
+     overflow: hidden
+}
+.footerSelect  ul li{line-height: 50px; width:350px;}
+
+.footerSelect  ul li a{color:#fff; display:block;}
