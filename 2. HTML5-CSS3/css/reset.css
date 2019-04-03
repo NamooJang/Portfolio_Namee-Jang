@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Black+Han+Sans|Nanum+Gothic:400,700&subset=korean');
+
+/*font-family: 'Nanum Gothic', sans-serif;*/
+/*font-family: 'Black Han Sans', sans-serif;*/
+/*font-family: 'Alfa Slab One', cursive;*/
+
+body,
+div,
+a,
+header,
+h1,
+h4,
+ul,
+li,
+form,
+fieldset,
+legend,
+label,
+select,
+option,
+input,
+section,
+h3,
+iframe,
+aside,
+article,
+span,
+p,
+dl,
+dt,
+dd,
+img,
+footer {
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+
+body{font-family: 'Nanum Gothic', sans-serif;}
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	color: #666;
+}
+
+a:hover,
+a:active,
+a:focus {
+	font-weight:900;
+	color: #666;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.skip,
+legend,
+label {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+    visibility: hidden;
+    text-indent: -999px;
+    display: block;
+}
+
+
+
+img,
+fieldset {
+    border: none;
+}
+
+#skipMenu{width: 0; height: 0; visibility: 0; font-size: 0; visibility: hidden; text-indent: -9999px; overflow: hidden;}
+
+.fix{width: 1600px;
+    margin: 0 auto;}
