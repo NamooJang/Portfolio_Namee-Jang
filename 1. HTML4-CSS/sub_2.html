@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="keywords" content="키워드넣기" />
+    <meta name="description" content="설명넣기" />
+    <meta name="author" content="저자넣기" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+    //gnb부분
+		$(document).ready(function() {
+			$('.subWrap').hide();
+
+			$('.gnbMenu_1 > li').mouseenter(function() {
+				$(this).find('.subWrap').css('display', 'block');
+				$(this).css('border-bottom', '2px solid black');
+			})
+
+			$('.gnbMenu_1 > li').mouseleave(function() {
+				$(this).find('.subWrap').css('display', 'none');
+				$(this).css('border-bottom', 'none');
+			})
+		})
+
+    </script>
+<body>
+
+    <div id="skipMenu">
+        <a href="#gnb">주메뉴 바로가기</a>
+        <a href="#container">본문 바로가기</a>
+    </div>
+
+    <div id="warp">
+
+
+        <!--Header Start-->
+<div id="headerWrap">
+			<div id="header">
+				<h1><a href="#"><img src="images/header_logo.png" alt="기흥구" /></a></h1>
+
+				<div class="infowrap">
+					<ul class="header_submenu">
+						<li><a href="#">행정전화번호부</a></li>
+						<li><a href="#">로그인</a></li>
+						<li><a href="#">회원가입</a></li>
+						<li><a href="#">이용안내</a></li>
+					</ul>
+
+					<form action="#" class="search">
+						<fieldset>
+							<legend>통합검색</legend>
+							<label for="headerSearch" class="skip">통합 검색어 입력</label>
+							<input type="text" class="headerSearch" id="headerSearch" value="검색어를 입력하세요" /><input type="image" src="images/search_btn.png" alt="검색" title="검색" />
+						</fieldset>
+					</form>
+				</div>
+			</div><!-- header -->
+
+			<div id="gnbWrap">
+				<div class="gnb">
+					<ul class="gnbMenu_1">
+						<li><a href="#">기흥구 소식</a>
+							<div class="subWrap">
+								<p class="gnbTitle_1">기흥구 소식</p>
+								<ul class="gnbMenu_2">
+									<li><a href="#">구청장실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">인사말</a></li>
+											<li><a href="#">역대구청장</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">구정업무</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">정책목표</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">기흥구안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">연혁 및 유래</a></li>
+											<li><a href="#">행정구역/법정구역</a></li>
+											<li><a href="#">주민센터현황</a></li>
+											<li><a href="#">행정지도</a></li>
+											<li><a href="#">지역명표기</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">부서/업무안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">조직도</a></li>
+											<li><a href="#">부서업무안내</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">행정자료실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">행정정보공개</a></li>
+											<li><a href="#">자치법규</a></li>
+											<li><a href="#">용인시통계</a></li>
+											<li><a href="#">예산안내</a></li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">종합민원</a>
+							<div class="subWrap">
+								<p class="gnbTitle_2">종합민원</p>
+								<ul class="gnbMenu_2">
+									<li><a href="#">구청장실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">인사말</a></li>
+											<li><a href="#">역대구청장</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">구정업무</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">정책목표</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">기흥구안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">연혁 및 유래</a></li>
+											<li><a href="#">행정구역/법정구역</a></li>
+											<li><a href="#">주민센터현황</a></li>
+											<li><a href="#">행정지도</a></li>
+											<li><a href="#">지역명표기</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">부서/업무안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">조직도</a></li>
+											<li><a href="#">부서업무안내</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">행정자료실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">행정정보공개</a></li>
+											<li><a href="#">자치법규</a></li>
+											<li><a href="#">용인시통계</a></li>
+											<li><a href="#">예산안내</a></li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+
+						<li><a href="#">열린행정</a>
+							<div class="subWrap">
+								<p class="gnbTitle_3">열린행정</p>
+								<ul class="gnbMenu_2">
+									<li><a href="#">구청장실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">인사말</a></li>
+											<li><a href="#">역대구청장</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">구정업무</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">정책목표</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">기흥구안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">연혁 및 유래</a></li>
+											<li><a href="#">행정구역/법정구역</a></li>
+											<li><a href="#">주민센터현황</a></li>
+											<li><a href="#">행정지도</a></li>
+											<li><a href="#">지역명표기</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">부서/업무안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">조직도</a></li>
+											<li><a href="#">부서업무안내</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">행정자료실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">행정정보공개</a></li>
+											<li><a href="#">자치법규</a></li>
+											<li><a href="#">용인시통계</a></li>
+											<li><a href="#">예산안내</a></li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">분야별 정보</a>
+							<div class="subWrap">
+
+								<p class="gnbTitle_4">분야별 정보</p>
+								<ul class="gnbMenu_2">
+									<li><a href="#">구청장실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">인사말</a></li>
+											<li><a href="#">역대구청장</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">구정업무</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">정책목표</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">기흥구안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">연혁 및 유래</a></li>
+											<li><a href="#">행정구역/법정구역</a></li>
+											<li><a href="#">주민센터현황</a></li>
+											<li><a href="#">행정지도</a></li>
+											<li><a href="#">지역명표기</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">부서/업무안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">조직도</a></li>
+											<li><a href="#">부서업무안내</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">행정자료실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">행정정보공개</a></li>
+											<li><a href="#">자치법규</a></li>
+											<li><a href="#">용인시통계</a></li>
+											<li><a href="#">예산안내</a></li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">기흥구 소개</a>
+							<div class="subWrap">
+
+								<p class="gnbTitle_5">기흥구 소개</p>
+								<ul class="gnbMenu_2">
+									<li><a href="#">구청장실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">인사말</a></li>
+											<li><a href="#">역대구청장</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">구정업무</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">정책목표</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">기흥구안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">연혁 및 유래</a></li>
+											<li><a href="#">행정구역/법정구역</a></li>
+											<li><a href="#">주민센터현황</a></li>
+											<li><a href="#">행정지도</a></li>
+											<li><a href="#">지역명표기</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">부서/업무안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">조직도</a></li>
+											<li><a href="#">부서업무안내</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">행정자료실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">행정정보공개</a></li>
+											<li><a href="#">자치법규</a></li>
+											<li><a href="#">용인시통계</a></li>
+											<li><a href="#">예산안내</a></li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- gnbWrap -->
+		</div><!-- headerWarp -->
+
+        <!---Header End-->
+
+        <!--Container Start-->
+
+    
+
+
+
+
+
+
+        <!---------------------------------------------------------------------------------------->
+
+        <div class="containerWrap">
+
+            <div id="sub_1">
+                <div class="sub1_Wrap_1">
+                    <h3>열린행정</h3>
+                    <ul class="sub1_menu_1">
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                    </ul>
+                </div>
+
+                <div class="container_1">
+
+                    <h3>자유게시판</h3>
+                    <div class="current_site">
+                        <span><a href="#">열린행정 &gt; </a></span>
+                        <span><a href="#">자유게시판</a></span>
+                    </div>
+
+                    <div class="notice">
+                        <p>시민여러분께 [자유게시판]운영과 관련하여 안내 말씀을 드립니다.
+                            개인정보가 불법적으로 이용되는 것을 막기 위하여 이용자께서는 <span>e-메일, 주소, 주민등록번호, 전화번호</span>등 <span>개인정보에 관한 사항을 게시하는 것을 주의하시기 바랍니다.</span><br />
+                            <br />
+                            또한 <span>개인정보, 상업적 광고, 저속한 표현, 특정인에 대한 비방, 정치적 목적이나 성향</span>이 있는 게시글 등은 [용인시 인터넷 시스템 설치 및 운영에 관한 조례 제6조]에 의거 <span>사전 통보 없이 삭제될 수 있습니다.</span><br />
+                            <br />
+                            [자유게시판]의 게시글에 대해서는 답변하지 않음을 원칙으로 하오니 <span>답변을 원하시는 사항은 "민원신청"을 이용</span>해 주시기 바랍니다.</p><br />
+                    </div>
+
+                
+
+                <div class="container_2">
+                    <form method="post"  action="#"  name="">
+                    <span>총 <strong>6042</strong>건 <strong>1/605</strong>페이지</span>
+
+                    <fieldset class="cont_2_search">
+                        <legend>게시판 검색</legend>
+                        <select>
+                            <option>제목</option>
+                            <option>내용</option>
+                            <option>제목+내용</option>
+                        </select>
+
+                              <legend>게시판 검색</legend>
+                                <input type="text" class="search_bar" value="검색어를 입력하세요" />
+                                <input type="submit" value="검색" />
+                        
+
+                    </fieldset>
+                        </form>
+                </div>
+
+                <div class="container_3">
+                    <table summary="자유게시판" border="1">
+                        <caption>자유게시판</caption>
+                        <colgroup>
+                            <col width="100" />
+                            <col width="600" />
+                            <col width="100" />
+                            <col width="150" />
+                            <col width="60" />
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">등록일</th>
+                                <th scope="col">조회수</th>
+                            </tr>
+                        </thead>
+
+
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">6042</th>
+                                <td>[긴금]2020년도 사회복지서 2급 심화..</td>
+                                <td>***</td>
+                                <td>2019-01-15</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">6042</th>
+                                <td>[긴금]2020년도 사회복지서 2급 심화..</td>
+                                <td>***</td>
+                                <td>2019-01-15</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">6042</th>
+                                <td>[긴금]2020년도 사회복지서 2급 심화..</td>
+                                <td>***</td>
+                                <td>2019-01-15</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">6042</th>
+                                <td>[긴금]2020년도 사회복지서 2급 심화..</td>
+                                <td>***</td>
+                                <td>2019-01-15</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">6042</th>
+                                <td>[긴금]2020년도 사회복지서 2급 심화..</td>
+                                <td>***</td>
+                                <td>2019-01-15</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">6042</th>
+                                <td>[긴금]2020년도 사회복지서 2급 심화..</td>
+                                <td>***</td>
+                                <td>2019-01-15</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">6042</th>
+                                <td>[긴금]2020년도 사회복지서 2급 심화..</td>
+                                <td>***</td>
+                                <td>2019-01-15</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">6042</th>
+                                <td>[긴금]2020년도 사회복지서 2급 심화..</td>
+                                <td>***</td>
+                                <td>2019-01-15</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">6042</th>
+                                <td>[긴금]2020년도 사회복지서 2급 심화..</td>
+                                <td>***</td>
+                                <td>2019-01-15</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">6042</th>
+                                <td>[긴금]2020년도 사회복지서 2급 심화..</td>
+                                <td>***</td>
+                                <td>2019-01-15</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">6042</th>
+                                <td>[긴금]2020년도 사회복지서 2급 심화..</td>
+                                <td>***</td>
+                                <td>2019-01-15</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">6042</th>
+                                <td>[긴금]2020년도 사회복지서 2급 심화..</td>
+                                <td>***</td>
+                                <td>2019-01-15</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">6042</th>
+                                <td>[긴금]2020년도 사회복지서 2급 심화..</td>
+                                <td>***</td>
+                                <td>2019-01-15</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="board_num">
+                    <ul>
+                        <li class="current"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li>.....</li>
+                        <li><a href="#">603</a></li>
+                        <li><a href="#">604</a></li>
+
+                       <li><span class="nextPage"><a href="#">한페이지 이동</a></span></li>
+                        <li><span class="lastPage"><a href="#">맨끝으로 이동</a></span></li>
+                    </ul>
+                </div>
+
+                <div class="bottomBtn">
+                    <a href="#"><img src="images/sub3_icon_7.png" alt="글쓰기"/></a>
+                    <a href="#"><img  src="images/sub3_icon_8.png" alt="목록보기"/></a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+</div>
+        <!---------------------------------------------------------------------------------------->
+
+
+        
+        <!--Footer Start-->
+        <div id="footerWrap">
+            <ul class="footerUl">
+                <li><a href="#">홈페이지개선요청</a></li>
+                <li><a href="#">홈페이지이용안내</a></li>
+                <li class="personalinfo"><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">구민현장</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">rss서비스안내</a></li>
+                <li><a href="#">뷰어다운로드</a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li><a href="#">찾아오시는길</a></li>
+                <li><a href="#">배너광장</a></li>
+            </ul>
+
+         
+                <div class="footerSelect">
+                    <ul id="footer_select_1" name="footer_select_1" class="footer_select_1">
+                         <li><a href="#" title="새창이동" target="_blank">부서/업무안내</a></li>
+                         <li><a href="#" title="새창이동" target="_blank">부서/업무안내</a></li>
+                         <li><a href="#" title="새창이동" target="_blank">부서/업무안내</a></li>
+                         <li><a href="#" title="새창이동" target="_blank">부서/업무안내</a></li>
+                    </ul>
+                    
+                    <ul id="footer_select_2" name="footer_select_2" class="footer_select_2">
+                        <li><a href="#" title="새창이동" target="_blank">동주민자치센터</a></li>
+                         <li><a href="#" title="새창이동" target="_blank">동주민자치센터</a></li>
+                         <li><a href="#" title="새창이동" target="_blank">동주민자치센터</a></li>
+                         <li><a href="#" title="새창이동" target="_blank">동주민자치센터</a></li>
+                    </ul>
+
+                    <ul id="footer_select_3" name="footer_select_3" class="footer_select_3">
+                        <li><a href="#" title="새창이동" target="_blank">용인시관련홈페이지</a></li>
+                        <li><a href="#" title="새창이동" target="_blank">용인시관련홈페이지</a></li>
+                        <li><a href="#" title="새창이동" target="_blank">용인시관련홈페이지</a></li>
+                        <li><a href="#" title="새창이동" target="_blank">용인시관련홈페이지</a></li>
+                    </ul>
+                </div>
+            
+
+
+            <div class="footerText">               
+
+                <address>[우] 16963 경기도 용인시 기흥구 관곡로 95(구갈동)</address>
+                <p class="footer_p">민원안내 콜센터 : 1577-1122 / 대표번호 : 031-324-6114 / 팩스 : 031-324-6029</p>
+                <p class="footer_p">Copyright &copy; YONGIN-CITY GIHEUNG-GU OFFICE. All Rights Rreserved.</p>
+            </div>
+        </div><!-- footerWrap -->
+
+        <!--Footer End-->
+    </div>
+</body>
+
+</html>
