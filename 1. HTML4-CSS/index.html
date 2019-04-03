@@ -1,0 +1,812 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>경기도 용인시 기흥구 홈페이지_main</title>
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="keywords" content="키워드넣기" />
+	<meta name="description" content="설명넣기" />
+	<meta name="author" content="저자넣기" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script>
+		//gnb부분
+		$(document).ready(function() {
+			$('.subWrap').hide();
+
+			$('.gnbMenu_1 > li').mouseenter(function() {
+				$(this).find('.subWrap').css('display', 'block');
+				$(this).css('border-bottom', '2px solid black');
+			})
+
+			$('.gnbMenu_1 > li').mouseleave(function() {
+				$(this).find('.subWrap').css('display', 'none');
+				$(this).css('border-bottom', 'none');
+			})
+		})
+
+
+		//팝업부분(prepend/append/setInterval)
+		var st;
+		$(document).ready(function() {
+			clearInterval(st);
+			$('.prevBtn').click(function() {
+				$('.popup').prepend($('.popup li:last-child'));
+				$('.popup').css('left', '-660px');
+				$('.popup').animate({
+					left: '0'
+				}, 1000);
+			})
+
+			$('.stopBtn').click(function() {
+				clearInterval(st);
+			})
+
+			$('.nextBtn').click(function() {
+				clearInterval(st);
+				$('.popup').animate({
+					left: '-660px'
+				}, 1000, function() {
+					$('.popup').append($('.popup li:first-child'));
+					$('.popup').css('left', '0')
+				})
+			})
+
+			st = setInterval(auto, 3000);
+		})
+
+		function auto() {
+			$('.popup').animate({
+				left: '-660px'
+			}, 1000, function() {
+				$('.popup').append($('.popup li:first-child'));
+				$('.popup').css('left', '0')
+			})
+		}
+
+//		//보도자료
+//		$(document).ready(function() {
+//					$('.cont3_prevBtn').click(function() {
+//
+//					})
+//
+//					$('.cont3_nextBtn').click(function() {
+//						$('.news').animate({
+//							left: '-500px'
+//						}, 1000)
+//					})
+//
+
+
+					//게시판 탭메뉴 부분
+					$(document).ready(function() {
+                       
+                        
+						$('.cont3_board_sub').hide();
+
+						$('.tab_1').click(function(e) {
+                            e.preventDefault();
+							$('.cont3_board_sub_1').removeClass('off').addClass('on');
+							$('.cont3_board_sub_2').removeClass('on').addClass('off');
+							$('.cont3_board_sub_3').removeClass('on').addClass('off');
+
+						})
+						$('.tab_2').click(function(e) {
+                            e.preventDefault();
+							$('.cont3_board_sub_1').removeClass('on').addClass('off');
+							$('.cont3_board_sub_2').removeClass('off').addClass('on');
+							$('.cont3_board_sub_3').removeClass('on').addClass('off');
+						})
+						$('.tab_3').click(function(e) {
+                            e.preventDefault();
+							$('.cont3_board_sub_1').removeClass('on').addClass('off');
+							$('.cont3_board_sub_2').removeClass('on').addClass('off');
+							$('.cont3_board_sub_3').removeClass('off').addClass('on');
+						})
+
+
+
+					})
+
+	</script>
+</head>
+
+<body>
+
+	<div id="skipMenu">
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#container">본문 바로가기</a>
+	</div>
+
+	<div id="warp">
+
+
+		<!--Header Start-->
+
+		<div id="headerWrap">
+			<div id="header">
+				<h1><a href="#"><img src="images/header_logo.png" alt="기흥구" /></a></h1>
+
+				<div class="infowrap">
+					<ul class="header_submenu">
+						<li><a href="#">행정전화번호부</a></li>
+						<li><a href="#">로그인</a></li>
+						<li><a href="#">회원가입</a></li>
+						<li><a href="#">이용안내</a></li>
+					</ul>
+
+					<form action="#" class="search">
+						<fieldset>
+							<legend>통합검색</legend>
+							<label for="headerSearch" class="skip">통합 검색어 입력</label>
+							<input type="text" class="headerSearch" id="headerSearch" value="검색어를 입력하세요" /><input type="image" src="images/search_btn.png" alt="검색" title="검색" />
+						</fieldset>
+					</form>
+				</div>
+			</div><!-- header -->
+
+			<div id="gnbWrap">
+				<div class="gnb">
+					<ul class="gnbMenu_1">
+						<li><a href="#">기흥구 소식</a>
+							<div class="subWrap">
+								<p class="gnbTitle_1">기흥구 소식</p>
+								<ul class="gnbMenu_2">
+									<li><a href="#">구청장실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">인사말</a></li>
+											<li><a href="#">역대구청장</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">구정업무</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">정책목표</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">기흥구안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">연혁 및 유래</a></li>
+											<li><a href="#">행정구역/법정구역</a></li>
+											<li><a href="#">주민센터현황</a></li>
+											<li><a href="#">행정지도</a></li>
+											<li><a href="#">지역명표기</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">부서/업무안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">조직도</a></li>
+											<li><a href="#">부서업무안내</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">행정자료실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">행정정보공개</a></li>
+											<li><a href="#">자치법규</a></li>
+											<li><a href="#">용인시통계</a></li>
+											<li><a href="#">예산안내</a></li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">종합민원</a>
+							<div class="subWrap">
+								<p class="gnbTitle_2">종합민원</p>
+								<ul class="gnbMenu_2">
+									<li><a href="#">구청장실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">인사말</a></li>
+											<li><a href="#">역대구청장</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">구정업무</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">정책목표</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">기흥구안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">연혁 및 유래</a></li>
+											<li><a href="#">행정구역/법정구역</a></li>
+											<li><a href="#">주민센터현황</a></li>
+											<li><a href="#">행정지도</a></li>
+											<li><a href="#">지역명표기</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">부서/업무안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">조직도</a></li>
+											<li><a href="#">부서업무안내</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">행정자료실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">행정정보공개</a></li>
+											<li><a href="#">자치법규</a></li>
+											<li><a href="#">용인시통계</a></li>
+											<li><a href="#">예산안내</a></li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+
+						<li><a href="#">열린행정</a>
+							<div class="subWrap">
+								<p class="gnbTitle_3">열린행정</p>
+								<ul class="gnbMenu_2">
+									<li><a href="#">구청장실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">인사말</a></li>
+											<li><a href="#">역대구청장</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">구정업무</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">정책목표</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">기흥구안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">연혁 및 유래</a></li>
+											<li><a href="#">행정구역/법정구역</a></li>
+											<li><a href="#">주민센터현황</a></li>
+											<li><a href="#">행정지도</a></li>
+											<li><a href="#">지역명표기</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">부서/업무안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">조직도</a></li>
+											<li><a href="#">부서업무안내</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">행정자료실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">행정정보공개</a></li>
+											<li><a href="#">자치법규</a></li>
+											<li><a href="#">용인시통계</a></li>
+											<li><a href="#">예산안내</a></li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">분야별 정보</a>
+							<div class="subWrap">
+
+								<p class="gnbTitle_4">분야별 정보</p>
+								<ul class="gnbMenu_2">
+									<li><a href="#">구청장실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">인사말</a></li>
+											<li><a href="#">역대구청장</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">구정업무</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">정책목표</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">기흥구안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">연혁 및 유래</a></li>
+											<li><a href="#">행정구역/법정구역</a></li>
+											<li><a href="#">주민센터현황</a></li>
+											<li><a href="#">행정지도</a></li>
+											<li><a href="#">지역명표기</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">부서/업무안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">조직도</a></li>
+											<li><a href="#">부서업무안내</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">행정자료실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">행정정보공개</a></li>
+											<li><a href="#">자치법규</a></li>
+											<li><a href="#">용인시통계</a></li>
+											<li><a href="#">예산안내</a></li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">기흥구 소개</a>
+							<div class="subWrap">
+
+								<p class="gnbTitle_5">기흥구 소개</p>
+								<ul class="gnbMenu_2">
+									<li><a href="#">구청장실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">인사말</a></li>
+											<li><a href="#">역대구청장</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">구정업무</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">정책목표</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">기흥구안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">연혁 및 유래</a></li>
+											<li><a href="#">행정구역/법정구역</a></li>
+											<li><a href="#">주민센터현황</a></li>
+											<li><a href="#">행정지도</a></li>
+											<li><a href="#">지역명표기</a></li>
+											<li><a href="#">주요사업</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">부서/업무안내</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">조직도</a></li>
+											<li><a href="#">부서업무안내</a></li>
+										</ul>
+									</li>
+
+									<li><a href="#">행정자료실</a>
+										<ul class="gnbMenu_3">
+											<li><a href="#">행정정보공개</a></li>
+											<li><a href="#">자치법규</a></li>
+											<li><a href="#">용인시통계</a></li>
+											<li><a href="#">예산안내</a></li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- gnbWrap -->
+		</div><!-- headerWarp -->
+
+		<!---Header End-->
+
+		<!--Container Start-->
+
+
+		<div id="container">
+
+
+			<div class="cont1">
+				<div class="cont1_content">
+					<div class="dong">
+						<form action="#">
+							<p class="subj">기흥구주민자치센터<br />바로가기</p>
+							<fieldset>
+								<legend>기흥구주민자치센터바로가기</legend>
+
+								<label for="dong_siteselect">기흥구주민자치센터 바로가기</label>
+								<select id="dong_siteselect" name="dong_siteselect">
+									<option value="/">구갈동</option>
+									<option value="/">구성동</option>
+									<option value="/">구성동</option>
+									<option value="/">동백동</option>
+									<option value="/">동백동</option>
+									<option value="/">동백동</option>
+									<option value="/">마북동</option>
+									<option value="/">상갈동</option>
+									<option value="/">상하동</option>
+									<option value="/">신갈동</option>
+								</select><input type="button" value="이동">
+								<p class="exp">각 동을 클릭하시면 해당 주민자치센터로 이동합니다.</p>
+							</fieldset>
+						</form>
+					</div><!-- dong -->
+
+					<div class="weatherWrap">
+						<div class="weaterGroup">
+							<ul class="weatherdate">
+								<li>12월 12일 수요일</li>
+								<li><span>2.5</span>℃</li>
+							</ul>
+							<span class="SMS"><a href="#">대기오염정보SMS신청</a></span>
+						</div>
+
+						<ul class="weatherInfo">
+							<li>강수확률<span class="detail">0%</span></li>
+							<li>미세먼지<span class="detail">좋음</span></li>
+							<li>오존경보<span class="detail">없음</span></li>
+						</ul>
+					</div><!-- weather-->
+				</div>
+				<!--cont1_content-->
+			</div><!-- cont1 -->
+
+
+			<div class="cont2">
+				<h3 class="skip">주요정보 팝업존</h3>
+				<div class="popupzone">
+					<ul class="popup">
+						<li><a href="#"><img src="images/popup_1.png" alt="2018.12.17 부터 정부 24 사용전 검사 온라인 필증 발급 서비스가 시작됩니다. 그동안 용인시 자체적으로 제공하던 사용전 검사 필증 발급서비스가 종료되고, (전국공통) 정부24에서 사용전 검사필증 출력이 가능합니다." /></a></li>
+						<li><a href="#"><img src="images/popup_2.png" alt="전국택시업계 카카오(카풀) 규탄결의대회에 따른 택시 운행중단 안내. 전국택시업계의 국회의사당 집회참석으로 인해 우리시 모든 택시도 운행이 중단됩니다. 시민여러분께서는 택시 이용에 참고 바라며, 버스 등 대중교통을 이용하시기 바랍니다. 운행 중단일시: 2018.12.20 (목) 00:00~24:00 입니다." /></a></li>
+						<li><a href="#"><img src="images/popup_3.png" alt="용인시 손바닥 소식. 특별한 당신에게 드리는 용인시 손바닥 소식! 지금 신청해 보세요!" /></a></li>
+					</ul>
+
+
+					<div class="popupbtn">
+						<a href="#" class="prevBtn"><img src="images/cont4_left.png" alt="popup정보 왼쪽으로 이동" /></a><a href="#" class="stopBtn"><img src="images/cont4_stop.png" alt="popup정보 정지" /></a><a href="#" class="nextBtn"><img src="images/cont4_right.png" alt="popup정보 오른쪽으로 이동" /></a>
+					</div>
+
+				</div>
+				<!--popupzone-->
+
+
+
+				<div class="complaint">
+					<h3 class="comH3">스마트민원</h3>
+
+					<form action="#">
+						<fieldset>
+							<div class="complaint_select">
+
+								<legend>스마트 현장신고</legend>
+								<dl class="complaint_1">
+									<dt><strong>1.</strong>어디가?</dt>
+									<dd>
+										<label for="complaint_siteselect">민원업무 분류</label>
+										<select id="complaint_siteselect" name="complaint_siteselect">
+											<option value="업무분류">민원분류</option>
+											<option value="민원업무">민원발급</option>
+											<option value="민원업무">세금납부</option>
+											<option value="민원업무">민원신청</option>
+											<option value="민원업무">민원서식</option>
+											<option value="민원업무">여권발급</option>
+											<option value="민원업무">자동차민원</option>
+										</select>
+									</dd>
+
+								</dl>
+
+								<dl class="complaint_search complaint_2">
+									<dt><strong>2.</strong>어떻게 되었습니까?</dt>
+									<dd>
+										<input type="text" class="complaingSearch" id="srch" value="신고사항을 입력해주세요" /><input type="submit" src="images/cont2_search_btn.png" value="신고하기" alt="신고하기" />
+									</dd>
+
+								</dl>
+
+
+
+
+							</div>
+
+
+						</fieldset>
+					</form>
+
+					<div class="complaint_sub">
+						<dl>
+							<dt>주요민원 바로가기</dt>
+							<dd class="complaint_sub_ul">
+								<span><a href="#" class="complaint_incon_1">민원신청</a></span>
+								<span><a href="#" class="complaint_incon_2">규제신고센터</a></span>
+								<span><a href="#" class="complaint_incon_3">교통불편신고</a></span>
+								<span><a href="#" class="complaint_incon_1">민원신청</a></span>
+								<span><a href="#" class="complaint_incon_2">규제신고센터</a></span>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<!--complaint-->
+			</div><!-- cont2 -->
+
+
+
+
+			<div class="cont3">
+				<div class="cont3_newsWrap">
+					<h3>보도자료</h3>
+
+
+					<div class="newsWrap">
+						<div class="news">
+							<div class="cont3_news1">
+								<a href="#">
+									<img src="images/tour.png" alt="기흥 고매~공세동 지역간 연결도로 30일 개통 뉴스 보기" />
+									<span><span class="num">1.</span> 기흥 고매~공세동 지역간 연결도로 30일 개통<span class="cont3_date">2019.01.01</span>
+									</span>
+								</a>
+							</div>
+
+
+							<div class="cont3_news2">
+								<a href="#"><img src="images/tour.png" alt="기흥 고매~공세동 지역간 연결도로 30일 개통 뉴스 보기" />
+									<span><span class="num">2.</span> 기흥 고매~공세동 지역간 연결도로 30일 개통<span class="cont3_date">2019.01.01</span>
+									</span>
+								</a>
+							</div>
+
+							<div class="cont3_news3">
+								<a href="#"><img src="images/tour.png" alt="기흥 고매~공세동 지역간 연결도로 30일 개통 뉴스 보기" />
+									<span><span class="num">3.</span> 기흥 고매~공세동 지역간 연결도로 30일 개통<span class="cont3_date">2019.01.01</span>
+									</span>
+								</a>
+							</div>
+
+							<div class="cont3_news4">
+								<a href="#"><img src="images/tour.png" alt="기흥 고매~공세동 지역간 연결도로 30일 개통 뉴스 보기" />
+									<span><span class="num">4.</span> 기흥 고매~공세동 지역간 연결도로 30일 개통<span class="cont3_date">2019.01.01</span>
+									</span>
+								</a>
+							</div>
+
+
+
+						</div>
+
+						<!--news-->
+					</div>
+					<div class="cont3_btn">
+						<p class="cont3_prevBtn"><a href="#">이전보기</a></p>
+						<p class="cont3_nextBtn"><a href="#">다음보기</a></p>
+						<p class="cont3_moreBtn"><a href="#">더보기</a></p>
+					</div>
+				</div><!-- cont3_newsWrap -->
+
+
+				<div class="cont3_boardWrap">
+					<ul class="cont3_board">
+						<li>
+							<h3><a href="#" class="tab_1">기흥구 소식</a></h3>
+							<ul class="cont3_board_sub_1 on">
+								<li><a href="#"><span class="sub_wel">복지</span> 기흥구 소식입니다.</a><span class="date">2018.12.04</span></li>
+								<li><a href="#"><span class="sub_wel">복지</span> 기흥구 소식입니다.</a><span class="date">2018.12.04</span></li>
+								<li><a href="#"><span class="sub_env">환경</span> 기흥구 소식입니다.</a><span class="date">2018.12.04</span></li> 
+								<li><a href="#"><span class="sub_eco">경제</span> 기흥구 소식입니다.</a><span class="date">2018.12.04</span></li>
+                                <li><a href="#"><span class="sub_eco">경제</span> 기흥구 소식입니다.</a><span class="date">2018.12.04</span></li>
+                                
+
+								<p class="cont3_board_moreBtn"><a href="#">더보기</a></p>
+							</ul>
+						</li>
+
+
+						<li>
+							<h3><a href="#" class="tab_2">채용/시험정보</a></h3>
+							<ul class="cont3_board_sub_2 off">
+								<li><a href="#">기흥구 채용/시험정보입니다.</a><span class="date">2018.12.04</span></li>
+								<li><a href="#">기흥구 채용/시험정보입니다.</a><span class="date">2018.12.04</span></li>
+								<li><a href="#">기흥구 채용/시험정보입니다.</a><span class="date">2018.12.04</span></li>
+								<li><a href="#">기흥구 채용/시험정보입니다.</a><span class="date">2018.12.04</span></li>
+                                <li><a href="#">기흥구 채용/시험정보입니다.</a><span class="date">2018.12.04</span></li>
+
+								<p class="cont3_board_moreBtn"><a href="#">더보기</a></p>
+							</ul>
+						</li>
+
+
+						<li>
+							<h3><a href="#" class="tab_3">입찰공고</a></h3>
+							<ul class="cont3_board_sub_3 off">
+								<li><a href="#">기흥구 입찰공고입니다.</a><span class="date">2018.12.04</span></li>
+								<li><a href="#">기흥구 입찰공고입니다.</a><span class="date">2018.12.04</span></li>
+								<li><a href="#">기흥구 입찰공고입니다.</a><span class="date">2018.12.04</span></li>
+								<li><a href="#">기흥구 입찰공고입니다.</a><span class="date">2018.12.04</span></li>
+                                <li><a href="#">기흥구 입찰공고입니다.</a><span class="date">2018.12.04</span></li>
+
+								<p class="cont3_board_moreBtn"><a href="#">더보기</a></p>
+							</ul>
+						</li>
+
+					</ul>
+				</div><!-- cont3_boardWrap -->
+			</div><!-- cont3 -->
+
+
+			<div class="quick">
+				<div class="quick_cont">
+					<h3>빠른서비스</h3>
+					<ul class="quickSub">
+						<li class="quick_1"><a href="#">구청안내</a></li>
+						<li class="quick_2"><a href="#">행정<br/>전화번호</a></li>
+						<li class="quick_3"><a href="#">증명서<br/>발급</a></li>
+						<li class="quick_4"><a href="#">여권민원</a></li>
+						<li class="quick_5"><a href="#">자동차<br/>민원</a></li>
+						<li class="quick_6"><a href="#">콜센터</a></li>
+						<li class="quick_7"><a href="#">공공시설<br/>이용예약</a></li>
+						<li class="quick_8"><a href="#">생활체육<br/>강의신청</a></li>
+					</ul>
+				</div>
+				<!--quick_cont-->
+			</div><!-- quick -->
+            
+            
+            
+            
+            
+            
+
+			<div class="cont4Wrap">
+				<div class="cont4">
+					<h3>기흥구 생활 정보</h3>
+					<dl class="cont4_board citizen">
+						<dt><a href="#">시민</a></dt>
+						<dd>
+							<ul class="cont4_board_sub">
+								<li><a href="#">대중교통 분실물센터</a></li>
+								<li><a href="#">동물보호복지</a></li>
+								<li><a href="#">버스노선보기</a></li>
+								<li><a href="#">분양정보</a></li>
+								<li><a href="#">소비자상담</a></li>
+								<li><a href="#">정책연구자료</a></li>
+								<li><a href="#">지방세 납부</a></li>
+								<li><a href="#">청년정책 플랫폼</a></li>
+								<li><a href="#">교통정보서비스센터</a></li>
+								<li><a href="#">도로명 주소찾기</a></li>
+								<li><a href="#">미디어 용인</a></li>
+								<li><a href="#">용인 생활지도</a></li>
+								<li><a href="#">여권발급신청안내</a></li>
+								<li><a href="#">재활용품분리배출방법</a></li>
+							</ul>
+						</dd>
+					</dl>
+					<dl class="tour">
+						<dt><a href="#">관광객</a></dt>
+						<dd>
+							<ul class="cont4_board_sub">
+								<li><a href="#">관광홍보물 신청</a></li>
+								<li><a href="#">용인관광택시</a></li>
+								<li><a href="#">용인시티투어버스</a></li>
+								<li><a href="#">체험여행</a></li>
+								<li><a href="#">축제/공연/전시</a></li>
+								<li><a href="#">관광안내소</a></li>
+								<li><a href="#">맛집/숙박</a></li>
+								<li><a href="#">의료관광</a></li>
+								<li><a href="#">추천여행코스</a></li>
+							</ul>
+						</dd>
+					</dl>
+					<dl class="business">
+						<dt><a href="#">사업자</a></dt>
+						<dd>
+							<ul class="cont4_board_sub">
+								<li><a href="#">개별주택/공시지가</a></li>
+								<li><a href="#">규제개혁</a></li>
+								<li><a href="#">등록대부업체 명단</a></li>
+								<li><a href="#">용인경제통계포털</a></li>
+								<li><a href="#">외자유치</a></li>
+								<li><a href="#">입찰정보</a></li>
+								<li><a href="#">정비사업통합(재개발)</a></li>
+								<li><a href="#">클린에너지</a></li>
+								<li><a href="#">건축동향</a></li>
+								<li><a href="#">도시계획정보지</a></li>
+								<li><a href="#">법무행정(조례/규칙)</a></li>
+								<li><a href="#">일자리정보망</a></li>
+								<li><a href="#">정보공개</a></li>
+								<li><a href="#">중소기업 지원시책</a></li>
+							</ul>
+						</dd>
+					</dl>
+
+				</div>
+				<!--cont4-->
+			</div><!-- cont4Wrap -->
+
+
+
+			<div class="cont6_banner">
+				<div class="cont6_btn">
+					<h3 class="skip">배너모음</h3>
+					<a href="#"><img src="images/banner_btn_left.png" alt="배너 왼쪽이동" /></a>
+					<a href="#"><img src="images/banner_btn_right.png" alt="배너 오른쪽이동" /></a>
+					<a href="#"><img src="images/banner_btn_stop.png" alt="배너 이동 정지" /></a>
+					<a href="#"><img src="images/banner_btn_more.png" alt="배너 더보기" /></a>
+				</div>
+				<!--cont6_btn-->
+				<div class="bannerWrap">
+					<ul class="bannerUl">
+						<li><a href="#"><img src="images/banner_1.png" alt="경기도시공사" /></a></li>
+						<li><a href="#"><img src="images/banner_2.png" alt="중앙선거관리위원회 정치후원금센터" /></a></li>
+						<li><a href="#"><img src="images/banner_3.png" alt="국민권익위원회" /></a></li>
+						<li><a href="#"><img src="images/banner_4.png" alt="국민신문고" /></a></li>
+						<li><a href="#"><img src="images/banner_5.png" alt="찾기쉬운생활법령정보" /></a></li>
+						<li><a href="#"><img src="images/banner_6.png" alt="워크넷 대한민국 모든 일자리 정보" /></a></li>
+
+						<li><a href="#"><img src="images/banner_1.png" alt="경기도시공사" /></a></li>
+						<li><a href="#"><img src="images/banner_2.png" alt="중앙선거관리위원회 정치후원금센터" /></a></li>
+						<li><a href="#"><img src="images/banner_3.png" alt="국민권익위원회" /></a></li>
+						<li><a href="#"><img src="images/banner_4.png" alt="국민신문고" /></a></li>
+						<li><a href="#"><img src="images/banner_5.png" alt="찾기쉬운생활법령정보" /></a></li>
+						<li><a href="#"><img src="images/banner_6.png" alt="워크넷 대한민국 모든 일자리 정보" /></a></li>
+					</ul>
+				</div>
+			</div><!-- cont6_banner -->
+		</div><!-- containerEnd -->
+
+
+		<!--Footer Start-->
+		<div id="footerWrap">
+			<ul class="footerUl">
+				<li><a href="#">홈페이지개선요청</a></li>
+				<li><a href="#">홈페이지이용안내</a></li>
+				<li class="personalinfo"><a href="#">개인정보처리방침</a></li>
+				<li><a href="#">구민현장</a></li>
+				<li><a href="#">이메일무단수집거부</a></li>
+				<li><a href="#">rss서비스안내</a></li>
+				<li><a href="#">뷰어다운로드</a></li>
+				<li><a href="#">저작권정책</a></li>
+				<li><a href="#">찾아오시는길</a></li>
+				<li><a href="#">배너광장</a></li>
+			</ul>
+
+
+			<div class="footerSelect">
+				<ul id="footer_select_1" name="footer_select_1" class="footer_select_1">
+					<li><a href="#" title="새창이동" target="_blank">부서/업무안내</a></li>
+					<li><a href="#" title="새창이동" target="_blank">부서/업무안내</a></li>
+					<li><a href="#" title="새창이동" target="_blank">부서/업무안내</a></li>
+					<li><a href="#" title="새창이동" target="_blank">부서/업무안내</a></li>
+				</ul>
+
+				<ul id="footer_select_2" name="footer_select_2" class="footer_select_2">
+					<li><a href="#" title="새창이동" target="_blank">동주민자치센터</a></li>
+					<li><a href="#" title="새창이동" target="_blank">동주민자치센터</a></li>
+					<li><a href="#" title="새창이동" target="_blank">동주민자치센터</a></li>
+					<li><a href="#" title="새창이동" target="_blank">동주민자치센터</a></li>
+				</ul>
+
+				<ul id="footer_select_3" name="footer_select_3" class="footer_select_3">
+					<li><a href="#" title="새창이동" target="_blank">용인시관련홈페이지</a></li>
+					<li><a href="#" title="새창이동" target="_blank">용인시관련홈페이지</a></li>
+					<li><a href="#" title="새창이동" target="_blank">용인시관련홈페이지</a></li>
+					<li><a href="#" title="새창이동" target="_blank">용인시관련홈페이지</a></li>
+				</ul>
+			</div>
+
+
+
+			<div class="footerText">
+		<address>[우] 16963 경기도 용인시 기흥구 관곡로 95(구갈동)</address>
+				<p class="footer_p">민원안내 콜센터 : 1577-1122 / 대표번호 : 031-324-6114 / 팩스 : 031-324-6029</p>
+				<p class="footer_p">Copyright &copy; YONGIN-CITY GIHEUNG-GU OFFICE. All Rights Rreserved.</p>
+			</div>
+		</div><!-- footerWrap -->
+
+		<!--Footer End-->
+
+
+	</div><!-- warp -->
+</body>
+
+</html>
