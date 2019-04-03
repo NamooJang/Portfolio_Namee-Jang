@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+/*font-family: 'Nanum Gothic', sans-serif;*/
+/*font-family: 'Black Han Sans', sans-serif;*/
+/*font-family: 'Alfa Slab One', cursive;*/
+
+#wrap_1 {
+	overflow: hidden;
+}
+
+
+#header_wrap {
+	position: relative;
+	line-height: 50px;
+	width: 100%;
+	overflow: hidden;
+	z-index: 2;
+	padding:10px;
+	background-color: (255,255,255,0.7)
+}
+
+
+
+.header_line_1 {
+	float: right;
+	overflow: hidden;
+}
+
+.logo {
+	display: inline-block;
+	position: absolute;
+	top:20px;
+	left: 20px;
+}
+
+.header_line_1_menu {
+	float: right;
+}
+
+
+.header_line_1_menu_ul li,
+.header_line_1_menu_ul li fieldset {
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+.header_line_1_menu_ul li a {
+
+}
+
+/*.header_line_2*/
+.header_line_2 {
+	position: relative;
+	z-index: 1;	
+	margin: 0 auto;
+	overflow: hidden;
+	width: 100%;
+}
+
+
+.header_line_2_menu_ul {
+	text-align: center;
+	float: right;	
+}
+
+.header_line_2_menu_ul:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.header_line_2_menu_ul > li {
+	display: inline-block;
+	vertical-align: top;
+	float: left;
+	width: 250px;
+}
+
+.header_line_2_menu_ul > li > a {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.header_line_2_menu_sub {
+	padding-left: 10px;
+	margin-bottom: 10px;
+
+}
+
+.header_line_2_menu_sub > li:hover {
+	padding-left: 20px;
+	transition: 1s;
+}
+
+
+.sub_all {
+	border: 1px solid #d9d9d9;
+	border-radius: 40px;
+	width: 150px;
+	padding: 0 20px;
+	margin: 10px 0 0 40px;
+	text-align: center;
+	background-color: #d9d9d9
+}
+
+.sub_all:hover{
+	background-color: #666;
+
+}
+
+.sub_all:hover.sub_all a
+{color:#fff;}
+
+
+.event_newProduct {
+	width: 1600px;	
+	overflow: hidden;
+	margin: 20px auto;
+	border-top: 1px solid #d9d9d9;
+	display: none;
+}
+
+.event,
+.newProduct {
+	float: left;
+	margin: 10px 100px 300px 50px;
+	position: relative;
+	overflow: hidden;
+
+}
+
+.event h3,
+.newProduct h3 {
+	font-size: 12px;
+}
+
+.event img {
+	display: inline-block;
+	width: 600px;	
+	overflow: hidden;
+}
+
+.textEvent,
+.textNew {
+	position: absolute;
+	bottom: -55px;
+	left: 0;
+	height: 120px;
+	text-align: center;
+	padding: 10px;
+	font-weight: 100;
+	font-size: 18px;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #fff;
+	width: 100%;
+}
