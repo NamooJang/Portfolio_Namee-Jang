@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>IKEA 코리아</title>
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery-1.9.0.js"></script>
+
+	<script language="javascript" type="text/javascript">
+		//gnb부분
+		$(document).ready(function() {
+			var gnb
+			$('.header_2_sub').hide();
+
+			//all
+			$('.allMenu').on({
+				//1차메뉴
+				mouseenter: function() { //마우스 올렸을때 
+					$('.all_on').stop().slideDown(200);
+					$('.all_on').find('a').css('color', '#ff6600');
+					$(this).css('color', '#ff6600');
+				},
+
+				mouseleave: function() { //마우스 내렸을때
+					$('.all_on').stop().slideUp(200);
+					$(this).css('color', '#fff');
+				}
+			})
+
+			//2차메뉴
+			$('.all_on').on({
+				mouseenter: function() {
+					$('.all_on').stop().slideDown(200);
+				},
+				mouseleave: function() {
+					$('.all_on').stop().slideUp(200);
+				}
+			})
+
+			//컬러 유지
+			$('.all_on > li').on({
+				mouseenter: function() {
+					$('.allMenu').css('color', '#ff6600')
+				},
+
+				mouseleave: function() {
+					$('.allMenu').css('color', '#fff')
+				}
+
+			})
+
+
+			//room
+			$('.room').on({
+				//1차메뉴
+				mouseenter: function() { //마우스 올렸을때 
+					$('.room_on').stop().slideDown(200);
+					$(this).css('color', '#ff6600');
+				},
+
+				mouseleave: function() { //마우스 내렸을때
+					$('.room_on').stop().slideUp(200);
+					$(this).css('color', '#fff');
+				}
+			})
+
+			//2차메뉴
+			$('.room_on').on({
+				mouseenter: function() {
+					$('.room_on').stop().slideDown(200);
+				},
+				mouseleave: function() {
+					$('.room_on').stop().slideUp(200);
+				}
+			})
+
+			//컬러 유지
+			$('.room_on').on({
+				mouseenter: function() {
+					$('.room').css('color', '#ff6600')
+				},
+
+				mouseleave: function() {
+					$('.room').css('color', '#fff')
+				}
+			})
+		})
+
+
+		//gnb_780
+		$(document).ready(function() {
+			$('.header_2_menu_780_sub').hide();
+			$('.header_2_menu_780 > li').click(function() {
+				$('.header_2_menu_780_sub').slideToggle()
+			})
+
+		})
+
+
+		//배너부분(append/prepend/setInterval)
+		$(document).ready(function() {
+
+			var num = 0
+			$('.cont_1_ul li:not(:eq(0))').hide();
+
+
+			$('.cont_1_prev').click(function() {
+				num--;
+				if (num < 0) num = 3
+				$('.cont_1_ul li:not(:eq(num))').hide();
+				$('.cont_1_ul li').eq(num).show();
+			});
+
+			$('.cont_1_next').click(function() {
+				num++;
+				if (num > 3) num = 0
+				$('.cont_1_ul li:not(:eq(num))').hide();
+				$('.cont_1_ul li').eq(num).show();
+
+			});
+
+		})
+	</script>
+
+</head>
+
+<body>
+
+	<div class="headerWrap">
+		<header>
+			<div class="header_1 fix">
+				<p><img src="images/header_flag.png" alt="이케아코리아">IKEA KOREA</p>
+
+				<ul class="header_1_menu">
+					<li><a href="#">고객지원</a></li>
+					<li class="header_family"><a href="#">이케아패밀리</a></li>
+					<li class="header_business"><a href="#">이케아비즈니스</a></li>
+					<li><a href="#">로그인</a></li>
+					<li><a href="#">마이페이지</a></li>
+					<li><a href="#">장바구니</a></li>
+				</ul>
+			</div>
+
+			<div class="header_1_780">
+				<ul class="header_1_menu">
+					<li><a href="#" class="icon">고객지원</a></li>
+					<li><a href="#" class="icon">로그인</a></li>
+					<li><a href="#" class="icon">마이페이지</a></li>
+					<li><a href="#" class="icon">장바구니</a></li>
+				</ul>
+			</div>
+
+			<div class="header_1_375">
+				<ul class="header_1_menu">
+					<li><a href="#">고객지원</a></li>
+					<li><a href="#">로그인</a></li>
+					<li><a href="#">마이페이지</a></li>
+					<li><a href="#">장바구니</a></li>
+				</ul>
+			</div>
+
+			<div class="header_2">
+				<section class="header_2_section fix ">
+					<h4 class="skip">메뉴</h4>
+					<p class="logo"><a href="#"><img src="images/header_logo.png" alt="이케아"></a></p>
+					<ul class="header_2_menu">
+						<!--web용 gnb-->
+						<li><a href="#" class="allMenu">모든제품</a>
+							<ul class="header_2_sub all_on">
+								<li><a href="#">소파/의자/테이블</a></li>
+								<li><a href="#">침대/매트리스</a></li>
+								<li><a href="#">요리/식기/주방가구</a></li>
+								<li><a href="#">어린이 IKEA</a></li>
+								<li><a href="#">수납</a></li>
+								<li><a href="#">조명</a></li>
+								<li><a href="#">텍스타일/러그/커튼</a></li>
+								<li><a href="#">홈데코/반려동물</a></li>
+								<li><a href="#">욕실</a></li>
+								<li><a href="#">야외용가구/가전제품</a></li>
+								<li><a href="#">여름용소품</a></li>
+								<li><a href="#">IKEA 푸드</a></li>
+								<article class="youtube">
+									<p>작은 변화가 큰 행복을 만듭니다.</p>
+									<iframe width="100%" height="100%" src="https://www.youtube.com/embed/I76HkaamjkI?start=20;autoplay=1;start=loop=1&playlist=I76HkaamjkI;controls=0&amp;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</article>
+							</ul>
+
+
+
+						</li>
+						<li class="menu_new"><a href="#">NEW</a></li>
+						<li><a href="#" class="room">공간</a>
+							<ul class="header_2_sub room_on">
+								<li><a href="#">거실</a></li>
+								<li><a href="#">침실</a></li>
+								<li><a href="#">욕실</a></li>
+								<li><a href="#">주방</a></li>
+
+								<li><a href="#">아이방</a></li>
+								<li><a href="#">사무실</a></li>
+								<li><a href="#">야외</a></li>
+								<li><a href="#">창고</a></li>
+							</ul>
+						</li>
+						<li><a href="#">인테리어 아이디어</a></li>
+					</ul>
+				</section>
+			</div>
+			<!--web용 gnb-->
+
+			<div class="header_2_780 off">
+				<h4 class="skip">메뉴</h4>
+				<p class="logo"><a href="#"><img src="images/header_logo.png" alt="이케아"></a></p>
+				<ul class="header_2_menu_780">
+					<!--780 gnb-->
+					<li><a href="#" class="all_780">모든제품</a>
+						<ul class="header_2_menu_780_sub">
+							<li><a href="#">소파/의자/테이블</a></li>
+							<li><a href="#">침대/매트리스</a></li>
+							<li><a href="#">요리/식기/주방가구</a></li>
+							<li><a href="#">어린이 IKEA</a></li>
+							<li><a href="#">수납</a></li>
+							<li><a href="#">조명</a></li>
+							<li><a href="#">텍스타일/러그/커튼</a></li>
+							<li><a href="#">홈데코/반려동물</a></li>
+							<li><a href="#">욕실</a></li>
+							<li><a href="#">야외용가구/가전제품</a></li>
+							<li><a href="#">여름용소품</a></li>
+							<li><a href="#">IKEA 푸드</a></li>
+						</ul>
+					</li>
+					<li class="menu_new"><a href="#">NEW</a></li>
+					<li><a href="#" class="room_780">공간</a>
+						<ul class="header_2_menu_780_sub">
+							<li><a href="#">거실</a></li>
+							<li><a href="#">침실</a></li>
+							<li><a href="#">욕실</a></li>
+							<li><a href="#">주방</a></li>
+							<li><a href="#">아이방</a></li>
+							<li><a href="#">사무실</a></li>
+							<li><a href="#">야외</a></li>
+							<li><a href="#">창고</a></li>
+
+						</ul>
+					</li>
+					<li><a href="#">아이디어</a></li>
+				</ul>
+			</div>
+			<!--780 gnb-->
+
+
+
+
+			<div class="header_2_375 off">
+				<div class="header_2_375_menu">
+					<p><a href="#"><img src="images/header_logo_780.png" alt="이케아코리아" width="100px"></a></p>
+					<ul class="header_2_ul_375">
+						<li><a href="#"><img src="images/menu_780.png" alt="메뉴"></a>
+							<ul class="off">
+								<li><a href="#">모든제품</a></li>
+								<li class="menu_new"><a href="#">NEW</a></li>
+								<li><a href="#">공간</a></li>
+								<li><a href="#">인테리어</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--header_2_375-->
+
+
+		</header>
+	</div>
+	<!--headerWrap-->
+
+
+	<div class="containerWrap">
+		<section class="cont_1_wrap">
+			<h4 class="skip">배너존</h4>
+			<ul class="cont_1_ul">
+				<li><a href="#"><img src="images/banner_1.jpg" alt="딱 좋은 침실"></a></li>
+				<li><a href="#"><img src="images/banner_2.jpg" alt="영디자이너를 위한 디자인 공모전"></a></li>
+				<li><a href="#"><img src="images/banner_3.jpg" alt="똑똑한 주방"></a></li>
+				<li><a href="#"><img src="images/banner_4.jpg" alt="딱 좋은 침실"></a></li>
+			</ul>
+			<div class="cont_1_btn">
+				<p class="cont_1_prev"><a href="#">이전보기</a></p>
+				<p class="cont_1_next"><a href="#">다음보기</a></p>
+			</div>
+		</section>
+
+		<section class="cont_2_wrap fix">
+
+			<h3 class="subT"><span>NEW</span> at IKEA</h3>
+
+			<div class="cont_2_div fix">
+				<ul class="cont_2_ul_1">
+					<li>
+						<h3><a href="#">신제품</a></h3>
+
+						<ul class="cont_2_ul_2">
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_1.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 1</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_2.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 2</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_3.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 3</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_4.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 3</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_5.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 3</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<h3><a href="#">인기제품</a></h3>
+
+						<ul class="cont_2_ul_2">
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_1.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 1</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_2.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 2</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_3.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 3</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_4.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 3</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_5.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 3</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<h3><a href="#">추천제품</a></h3>
+
+						<ul class="cont_2_ul_2">
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_1.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 1</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_2.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 2</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_3.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 3</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_4.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 3</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="images/cont_2_item_5.png" alt="제품"></a></dt>
+									<dd><a href="#">EKTORP 엑토르프 3</a></dd>
+									<dd><a href="#">3인용 소파, 코팔레트 베이지</a></dd>
+									<dd><a href="#">￦ 399,000 / 개</a></dd>
+								</dl>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!--cont_2_ul_1-->
+				<div class="cont_2_btn">
+					<p class="cont_2_prevBtn"><a href="#">이전보기</a></p>
+					<p class="cont_2_nextBtn"><a href="#">다음보기</a></p>
+				</div>
+				<div class="cont_2_btn_780 off">
+					<p class="cont_2_prevBtn"><a href="#">이전보기</a></p>
+					<p class="cont_2_nextBtn"><a href="#">다음보기</a></p>
+				</div>
+
+			</div>
+			<!--cont_2_div-->
+		</section>
+		<!--cont_2_wrap-->
+
+		<section class="cont_3_wrap">
+			<div class="cont_3_idea fix">
+				<h3 class="home"><span>IKEA</span><br />홈퍼니싱 아이디어</h3>
+
+				<div class="cont_3_div">
+
+					<dl class="cont_3_idea_dl">
+
+						<dt><a href="#"><img src="images/cont_3_idea_1.png" alt=""></a></dt>
+
+						<dd><a href="#">홈비짓 : 작은 집을 위한 손님맞이 팁</a></dd>
+						<dd class="date">2019.03.12</dd>
+						<dd><a href="#">작은 아파트에서 친구들과 신나는 파티를 즐길 방법이 있을까요? Yvet의 집을 방문했을 때, 그녀는 식탁 없이도 친구를 맞이할 수 있는 비결을 알려주었어요. 침대를 활용한 손님맞이 팁을 함께 살펴볼까요?</a></dd>
+
+					</dl>
+
+					<dl class="cont_3_idea_dl">
+						<dt><a href="#"><img src="images/cont_3_idea_2.png" alt=""></a></dt>
+						<dd><a href="#">감각적인 침실 새단장법 2가지</a></dd>
+						<dd class="date">2019.03.12</dd>
+						<dd><a href="#">이제 스타일리시한 침대에서 잠들어보세요. 전혀 다른 스타일의 봄맞이 침실 아이디어 2가지와 필요한 소품을 소개합니다.</a></dd>
+					</dl>
+
+					<dl class="cont_3_idea_dl">
+
+						<dt><a href="#"><img src="images/cont_3_idea_3.png" alt=""></a></dt>
+						<dd><a href="#">못 없이도 빠르고 간단하게 욕실 꾸미기</a></dd>
+						<dd class="date">2019.03.12</dd>
+						<dd><a href="#">새로 나온 TISKEN/티스켄 흡착식 액세서리로 공구 없이도 간단하게 욕실을 새단장해보세요. 또, 습기에 강한 RABBLA/라블라 상자를 활용하면, 작은 욕실에서도 수납공간을 넓힐 수 있어요.</a></dd>
+					</dl>
+
+					<dl class="cont_3_idea_dl">
+
+						<dt><a href="#"><img src="images/cont_3_idea_4.png" alt=""></a></dt>
+						<dd><a href="#">도심 속 원룸 아파트</a></dd>
+						<dd class="date">2019.03.12</dd>
+						<dd><a href="#">프리랜서 사진작가 yvet는 도심에 자리한 작은 원룸에 살고 있어요. 25평 정도면 조금의 불편함도 없이 일과 휴식, 손님맞이까지 가능한 공간을 모두 마련할 수 있다고 했죠.</a></dd>
+					</dl>
+
+					<div class="cont_3_btn">
+						<p class="cont_3_prevBtn"><a href="#">이전보기</a></p>
+						<p class="cont_3_nextBtn"><a href="#">다음보기</a></p>
+					</div>
+
+					<p class="cont_3_btn_780 off"><a href="#">더보기</a></p>
+
+				</div>
+
+
+				<div class="cont_3_recommendation">
+					<section class="cont_3_reco_priceTag">
+						<h3><a href="#">IKEA RECOMMENDATION</a></h3>
+						<ul>
+							<li><img src="images/cont_3_reco_img.png" alt="이케아 추천 인테리어">
+								<ul>
+									<li class="tag_1 tag"><a href="#"><span>ÅRSTID 오르스티드 플로어스탠드 <br />₩ 39,900 / 개</span></a></li>
+									<li class="tag_2 tag"><a href="#"><span>MICKE 미케 <br />₩ 99,900 / 개</span></a></li>
+									<li class="tag_3 tag"><a href="#"><span>HEMNES 헴네스 <br />₩ 299,900 / 개</span></a></li>
+									<li class="tag_4 tag"><a href="#"><span>BRIMNES 브림네스 <br />₩ 39,900 / 개</span></a></li>
+									<li class="tag_5 tag"><a href="#"><span>PÅHL 폴 <br />₩ 39,900 / 개</span></a></li>
+									<li class="tag_6 tag"><a href="#"><span>IVAR 이바르 <br />₩ 39,900 / 개</span></a></li>
+									<li class="tag_7 tag"><a href="#"><span>MELHOLT 멜홀트 <br />₩ 79,900 / 개</span></a></li>
+									<li class="tag_8 tag"><a href="#"><span>STOCKHOLM 2017 <br />₩ 299,900 / 개</span></a></li>
+								</ul>
+							</li>
+						</ul>
+						<p class="more"><a href="#">MORE <br /><span>더 많은 정보를 알고싶으신가요? <br /> 클릭하세요! </span> </a></p>
+					</section>
+
+					<section class="cont_3_reco_productLink">
+						<h3><a href="#">IKEA RECOMMENDATION</a></h3>
+						<div class="cont_3_ulWrap">
+							<ul>
+								<li>
+									<dl>
+										<dt><img src="images/" alt=""></dt>
+										<dd>EKTORP 엑토르프 1</dd>
+										<dd>￦ 399,000 / 개</dd>
+										<dd><img src="images/" alt="">이미지</dd>
+									</dl>
+								</li>
+
+								<li>
+									<dl>
+										<dt><img src="images/" alt=""></dt>
+										<dd>EKTORP 엑토르프 2</dd>
+										<dd>￦ 399,000 / 개</dd>
+										<dd><img src="images/" alt="">이미지</dd>
+									</dl>
+								</li>
+
+								<li>
+									<dl>
+										<dt><img src="images/" alt=""></dt>
+										<dd>EKTORP 엑토르프 3</dd>
+										<dd>￦ 399,000 / 개</dd>
+										<dd><img src="images/" alt="">이미지</dd>
+									</dl>
+								</li>
+
+								<li>
+									<dl>
+										<dt><img src="images/" alt=""></dt>
+										<dd>EKTORP 엑토르프 4</dd>
+										<dd>￦ 399,000 / 개</dd>
+										<dd><img src="images/" alt="">이미지</dd>
+									</dl>
+								</li>
+
+								<li>
+									<dl>
+										<dt><img src="images/" alt=""></dt>
+										<dd>EKTORP 엑토르프 5</dd>
+										<dd>￦ 399,000 / 개</dd>
+										<dd><img src="images/" alt="">이미지</dd>
+									</dl>
+								</li>
+							</ul>
+							<div class="cont_3_btn">
+								<p class="cont_3_prevBtn"><a href="#">이전보기</a></p>
+								<p class="cont_3_nextBtn"><a href="#">다음보기</a></p>
+							</div>
+						</div>
+						<!--cont_3_ulWrap-->
+						<p class="more"><a href="#">MORE</a></p>
+					</section>
+				</div>
+				<!--cont_3_recommendation-->
+			</div>
+			<!--cont_3_idea-->
+		</section>
+		<!--cont_3_wrap-->
+
+		<section class="cont_4_wrap fix">
+			<h4 class="skip">주문안내/고객지원</h4>
+			<article class="cont_4_order">
+				<h3>주문안내</h3>
+				<ul>
+					<li><a href="#">온라인주문</a></li>
+					<li><a href="#">매장방문</a></li>
+					<li><a href="#">배송조회</a></li>
+				</ul>
+			</article>
+			<article class="cont_4_cs">
+				<h3>고객지원</h3>
+				<ul>
+					<li><a href="#">제품조립서비스</a></li>
+					<li><a href="#">재고확인</a></li>
+					<li><a href="#">2019 IKEA 카탈로그</a></li>
+				</ul>
+			</article>
+		</section>
+
+		<section class="cont_4_wrap_375 off">
+			<h4 class="skip">주문안내/고객지원</h4>
+			<article class="cont_4_order">
+				<h3>주문안내</h3>
+				<ul>
+					<li><a href="#">온라인주문</a></li>
+					<li><a href="#">매장방문</a></li>
+					<li><a href="#">배송조회</a></li>
+				</ul>
+			</article>
+			<article class="cont_4_cs">
+				<h3>고객지원</h3>
+				<ul>
+					<li><a href="#">제품조립서비스</a></li>
+					<li><a href="#">재고확인</a></li>
+					<li><a href="#">2019 IKEA 카탈로그</a></li>
+				</ul>
+			</article>
+		</section>
+		<!--cont_4_wrap-->
+
+		<section class="cont_5_wrap fix">
+			<h3>회원혜택안내</h3>
+			<article class="cont_5_family">
+				<h4 class="skip">IKEA FAMILY</h4>
+				<dl>
+					<dt><a href="#">아직 IKEA FAMILY 멤버가 아닌가요?<br />
+							IKEA FAMILY 특별가 제품들과 홈퍼니싱 플래닝 서비스 등
+							더 많은 혜택을 즐겨보세요.</a></dt>
+					<dd><a href="#"><img src="images/cont_5_family.png" alt="이케아 패밀리"></a></dd>
+
+					<dd class="cont_5_text_1"><a href="#">IKEA FAMILY만의 놀라운 혜택을 만나보세요!</a></dd>
+					<dd class="cont_5_join_1"><a href="#">IKEA FAMILY 가입 ㅣ Join</a></dd>
+				</dl>
+			</article>
+
+			<article class="cont_5_business">
+				<h4 class="skip">IKEA BUSINESS</h4>
+				<dl>
+
+					<dt><a href="#">스마트한 사무실을 만드는 가장 현명한 방법!<br />
+							시간과 비용을 아끼며 쾌적한 사무실을 만들 수 있도록
+							도와드립니다.</a></dt>
+					<dd><a href="#"><img src="images/cont_5_business.png" alt="이케아 비즈니스"></a></dd>
+
+					<dd class="cont_5_text_2"><a href="#">IKEA BUSINESS만의 놀라운 혜택을 만나보세요!</a></dd>
+					<dd class="cont_5_join_2"><a href="#">IKEA BUSINESS 가입 ㅣ Join</a></dd>
+				</dl>
+			</article>
+		</section>
+
+
+		<section class="cont_5_wrap_375 off">
+			<h3>회원혜택안내</h3>
+			<article class="cont_5_family">
+				<h4 class="skip">IKEA FAMILY</h4>
+				<dl>
+                    <dt><a href="#"><img src="images/header_family.png" alt="이케아페밀리가입"></a></dt>
+					<dd class="cont_5_text_1"><a href="#">IKEA FAMILY만의 놀라운 혜택을 만나보세요!</a></dd>					
+					<dd class="cont_5_join_1"><a href="#">IKEA FAMILY <br/>가입하기 <br/>Join</a></dd>
+				</dl>
+			</article>
+
+			<article class="cont_5_business">
+				<h4 class="skip">IKEA BUSINESS</h4>
+				<dl>
+				<dt><a href="#"><img src="images/header_business.png" alt="이케아비즈니스가입"></a></dt>
+					<dd class="cont_5_text_2"><a href="#">IKEA BUSINESS만의 놀라운 혜택을 만나보세요!</a></dd>
+					<dd class="cont_5_join_2"><a href="#">IKEA BUSINESS <br/ >가입하기 <br/>Join</a></dd>
+				</dl>
+			</article>
+		</section>
+		<!--cont_5_wrap-->
+
+		<section class="cont_6_wrap fix">
+			<h4 class="skip">IKEA 전체 카테고리</h4>
+			<dl>
+				<dd>
+					<ul>
+						<li><a href="#">거실</a></li>
+						<li><a href="#">다이닝</a></li>
+						<li><a href="#">어린이 IKEA</a></li>
+						<li><a href="#">텍스타일</a></li>
+						<li><a href="#">거실 조명</a></li>
+					</ul>
+				</dd>
+				<dd>
+					<ul>
+						<li><a href="#">침실</a></li>
+						<li><a href="#">조리용품</a></li>
+						<li><a href="#">책상/테이블</a></li>
+						<li><a href="#">거실 수납</a></li>
+						<li><a href="#">사무실 조명</a></li>
+					</ul>
+				</dd>
+				<dd>
+					<ul>
+						<li><a href="#">소파/암체어</a></li>
+						<li><a href="#">식기</a></li>
+						<li><a href="#">옷장/침실수납</a></li>
+						<li><a href="#">소형 수납</a></li>
+						<li><a href="#">사무실 수납</a></li>
+					</ul>
+				</dd>
+				<dd>
+					<ul>
+						<li><a href="#">홈오피스</a></li>
+						<li><a href="#">텍스타일</a></li>
+						<li><a href="#">침대</a></li>
+						<li><a href="#">보조 수납</a></li>
+						<li><a href="#">야외</a></li>
+					</ul>
+				</dd>
+				<dd>
+					<ul>
+						<li><a href="#">주방</a></li>
+						<li><a href="#">욕실</a></li>
+						<li><a href="#">매트리스</a></li>
+						<li><a href="#">홈데코</a></li>
+						<li><a href="#">현관</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</section>
+        
+        
+        <section class="cont_6_wrap_375 off">
+			<h4 class="skip">IKEA 전체 카테고리</h4>
+			<dl>
+				<dd>
+					<ul>
+						<li><a href="#">거실</a></li>
+						<li><a href="#">어린이</a></li>
+						<li><a href="#">텍스타일</a></li>
+						<li><a href="#">조명</a></li>
+					</ul>
+				</dd>
+				<dd>
+					<ul>
+						<li><a href="#">침실</a></li>
+						<li><a href="#">책상</a></li>
+						<li><a href="#">수납</a></li>
+						<li><a href="#">사무실</a></li>
+					</ul>
+				</dd>
+				<dd>
+					<ul>
+						<li><a href="#">소파</a></li>
+						<li><a href="#">식기</a></li>
+						<li><a href="#">옷장</a></li>
+				
+					</ul>
+				</dd>
+				<dd>
+					<ul>
+						<li><a href="#">홈오피스</a></li>
+						<li><a href="#">주방</a></li>
+						<li><a href="#">야외</a></li>
+					</ul>
+				</dd>
+				<dd>
+					<ul>
+						<li><a href="#">욕실</a></li>
+						<li><a href="#">홈데코</a></li>
+						<li><a href="#">현관</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</section>
+		<!--cont_6_wrap-->
+
+		<section class="cont_7_wrap">
+			<div class="cont_7_div fix">
+				<h3>전체메뉴</h3>
+				<ul class="cont_7_ul_1">
+					<li><a href="#">쇼핑하기</a>
+						<ul class="cont_7_ul_2">
+							<li><a href="#">매장에서 쇼핑하기</a></li>
+							<li><a href="#">온라인에서 쇼핑하기</a></li>
+							<li><a href="#">IKEA 품질보증</a></li>
+							<li><a href="#">제품 재고 확인</a></li>
+							<li><a href="#">IKEA 카드 정보</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#">고객지원</a>
+						<ul class="cont_7_ul_2">
+							<li><a href="#">자주 묻는 질문</a></li>
+							<li><a href="#">고객문의</a></li>
+							<li><a href="#">배송조회</a></li>
+							<li><a href="#">반품정책</a></li>
+							<li><a href="#">조립하기</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#">IKEA 서비스</a>
+						<ul class="cont_7_ul_2">
+							<li><a href="#">배송 서비스</a></li>
+							<li><a href="#">조립 서비스</a></li>
+							<li><a href="#">온라인 플래닝</a></li>
+							<li><a href="#">홈퍼니싱 컨설팅 서비스</a></li>
+							<li><a href="#">주방 플래닝 서비스</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#">IKEA 이야기</a>
+						<ul class="cont_7_ul_2">
+							<li><a href="#">IKEA 컨셉</a></li>
+							<li><a href="#">모두를 위한 디자인</a></li>
+							<li><a href="#">IKEA 그룹 기업정보</a></li>
+							<li><a href="#">IKEA의 작업현장</a></li>
+							<li><a href="#">IKEA 하이라이트</a></li>
+							<li><a href="#">사람과 지구</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#">IKEA 그룹에서 일하기</a>
+						<ul class="cont_7_ul_2">
+							<li><a href="#">채용정보</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!--cont_7_wrap-->
+
+	</div>
+	<!--containerWrap-->
+
+
+	<div class="footerWrap">
+		<footer class="footer fix">
+			<div class="footer_text">
+				<p>IKEA 코리아</p>
+				<address>주소:(우)14352 경기도 광명시 일직로 17 IKEA 광명점</address>
+				<p>사업자 등록번호 : 106-86-82871</p>
+				<p>대표자: 안드레 슈미트갈</p>
+				<p>통신판매업 신고 : 2018-경기광명-0209</p>
+				<p>TEL : 1670-4532</p>
+			</div>
+			<p><img src="images/header_logo.png" alt="이케아"></p>
+		</footer>
+	</div>
+
+
+</body></html>
