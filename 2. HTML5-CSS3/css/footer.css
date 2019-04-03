@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/*font-family: 'Nanum Gothic', sans-serif;*/
+/*font-family: 'Black Han Sans', sans-serif;*/
+/*font-family: 'Alfa Slab One', cursive;*/
+
+footer {
+	text-align: center;
+	font-family: 'Alfa Slab One', cursive;
+	width: 100%;
+
+}
+
+.footer_menu_wrap {
+	background-color: #c4203b;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.footer_menu {
+	background: url(../images/footer_bg_2.png) no-repeat center 0/ 800px;
+}
+
+.footer_menu ul {
+	margin: 20px 0;
+}
+
+.footer_menu ul li {
+	display: inline;
+	margin-left: 20px;
+}
+
+.footer_menu ul li a {
+	font-size: 14px;
+
+}
+
+.footer_menu p {}
