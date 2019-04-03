@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* color
+orange: #f07f13
+dark orange: #b26222
+blue: #0058a3
+dark blue: #003867
+gray: #eeeeee
+*/
+
+div,
+header,
+p,
+img,
+ul,
+li,
+a,
+form,
+fieldset,
+legend,
+input,
+section,
+h3,
+span,
+dl,
+dt,
+dd,
+article,
+footer,
+adress {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	box-sizing: border-box;
+	color: #666;
+}
+
+img,
+input,
+fieldset {
+	border: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+address {
+	font-style: normal;
+}
+
+h3 {
+	font-size: 24px;
+	text-align: center;
+	margin: 20px 0 10px 0;
+}
+
+span {
+	font-size: 30px;
+	color: #f07f13;
+}
+a:link,
+a:visited {
+	text-decoration: none;
+	color: #666;
+}
+
+a:hover,
+a:active,
+a:focus {
+	font-weight:900;
+	color: #666;
+}
+
+.skip {
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+	line-height: 0;
+	font-size: 0;
+	visibility: hidden;
+	text-indent: -9999px;
+	display: block;
+}
+
+.fix {
+	width: 1600px;
+	margin: 0 auto;
+}
+
+.off {
+	display: none;
+}
