@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+.footerWrap{width:100%; background-color: #0058a3; overflow: hidden; padding:20px  0;}
+
+.footer_text{float: left; width: 800px;}
+.footer_text p:nth-of-type(1){font-size: 24px; font-weight: 700; margin-bottom: 20px;}
+.footer_text p, address{color:#fff; line-height: 30px; font-size: 14px;}
+.footer img{float: right;}
