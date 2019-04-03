@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>PATAGONIA KOREA</title>
+	<link href="css/main.css" rel=stylesheet type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- bxSlider CSS file -->
+	<link href="css/jquery.bxslider.css" rel="stylesheet" />
+	<!-- jQuery library -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<!-- bxSlider Javascript file -->
+	<script src="js/jquery.bxslider.js"></script>
+
+
+
+	<script>
+		//		//campaign
+		//		var st;
+		//		
+		//		function(){
+		//		$(document).ready(function() {
+		//			$('.campaign_tab_on').click(function() {
+		//				$('.campaign article').
+		//			})
+		//
+		//			$('.campaign_tab_off').click(function() {
+		//				$('.campaign article').animate({
+		//					top: 0
+		//				}, 1000);
+		//			})
+		//		});
+		//		}
+		//		setInterval(st, 1000);
+		//
+		//
+		//
+		//
+
+		//
+		//        //new arrivals
+		//        $(document).ready(function() {
+		//            num = 0;
+		//
+		//
+		//            $('.nextBtn').click(function() {
+		//
+		//                $('.newArrivals_1').
+		//                return false;
+		//            })
+		//
+		//            $('.prevBtn').click(function() {
+		//
+		//                return false;
+		//            })
+		//
+		//        })
+		//
+
+
+		//Menu
+		$(document).ready(function(){
+			$('.allMenuWrap').hide();
+			
+			$('.menuBtn').click(function(){
+				$('.allMenuWrap').show();
+			})
+			$('.allMenu_close').click(function(){
+				$('.allMenuWrap').hide();
+			})
+			
+			
+//			$('.gnbMenu_1 > li > a').click(function(){
+//				$(this).next().slideDown();
+//			})
+		})
+
+		//sports
+		$(document).ready(function() {
+			$('.container4_sports .sports_menu .sports_ul_1 .sports_ul_2').hide();
+
+			$('.sports_ul_1 li a').click(function() {
+				if ($(this).hasClass('down') == false) {
+					$('.sports_ul_1 li a.down').next().slideUp();
+					$('.sports_ul_1 li a.down').removeClass('down').addClass('up');
+
+
+					$(this).removeClass('up').addClass('down')
+					$(this).next().slideDown();
+
+					return false;
+				}
+			})
+		})
+		
+		
+		//NewArrivals
+		$(document).ready(function(){
+			$('.nextBtn').click(function(){
+				$('.container3_newArrivals')
+			})
+			
+			
+			$('.prevBtn').click(function(){
+								
+			})
+			
+			
+		})
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			$('.mainImg_divWrap').bxSlider({
+				mode: 'horizontal',
+				moveSlides: 1,
+				slideMargin: 0,
+				infiniteLoop: true,				
+				minSlides: 1,
+				maxSlides: 1,				
+				speed: 800,
+				auto: true,
+				autoControls: true,
+				stopAutoOnClick: true,
+				pager: true,				
+			});
+		});
+	</script>
+
+
+
+</head>
+
+<body>
+
+	<header id="header">
+		<div class="headerWrap">
+			<h1 class="headerMenu_logo">
+				<a href="#"><img src="images/Patagonia_logo_w.png" alt="파타고니아" width="148px"></a>
+			</h1>
+
+			<p class="menuBtn"><a href="#"><img src="images/Menubtn.png" alt="메뉴보기"></a></p>
+			<p class="cartBtn"><a href="#"><img src="images/cartbtn.png" alt=""></a></p>
+		</div><!--headerWrap-->
+	</header>
+			<div class="allMenuWrap">
+				<div class="allMenu_div">
+					<strong class="allMenu_close">메뉴닫기</strong>
+
+					<nav>
+						<form action="#" class="search">
+							<legend class="skip">통합검색</legend>
+							<label for="headerSearch" class="skip">통합 검색어 입력</label>
+							<input type="text" class="headerSearch" id="headerSearch" value="무엇을 찾으시나요?" /><input type="submit" value="검색" title="검색" />
+						</form>
+						<ul class="gnbMenu_1">
+							<li><a href="#">Shop</a>
+								<ul class="gnbMenu_2">
+									<li><a href="#">Shop</a></li>
+									<li><a href="#">Shop</a></li>
+									<li><a href="#">Shop</a></li>
+									<li><a href="#">Shop</a></li>
+									<li><a href="#">Shop</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Collections</a>
+								<ul class="gnbMenu_2">
+									<li><a href="#">Collections</a></li>
+									<li><a href="#">Collections</a></li>
+									<li><a href="#">Collections</a></li>
+									<li><a href="#">Collections</a></li>
+									<li><a href="#">Collections</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Sport</a>
+								<ul class="gnbMenu_2">
+									<li><a href="#">Sport</a></li>
+									<li><a href="#">Sport</a></li>
+									<li><a href="#">Sport</a></li>
+									<li><a href="#">Sport</a></li>
+									<li><a href="#">Sport</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Inside Patagonia</a>
+								<ul class="gnbMenu_2">
+									<li><a href="#">Inside Patagonia</a></li>
+									<li><a href="#">Inside Patagonia</a></li>
+									<li><a href="#">Inside Patagonia</a></li>
+									<li><a href="#">Inside Patagonia</a></li>
+									<li><a href="#">Inside Patagonia</a></li>
+								</ul>
+							</li>
+							<li><a href="#">My Page</a>
+								<ul class="gnbMenu_2">
+									<li><a href="#">My Page</a></li>
+									<li><a href="#">My Page</a></li>
+									<li><a href="#">My Page</a></li>
+									<li><a href="#">My Page</a></li>
+									<li><a href="#">My Page</a></li>
+								</ul>
+							</li>
+							<li><a href="#">More</a>
+								<ul class="gnbMenu_2">
+									<li><a href="#">More</a></li>
+									<li><a href="#">More</a></li>
+									<li><a href="#">More</a></li>
+									<li><a href="#">More</a></li>
+									<li><a href="#">More</a></li>
+								</ul>
+							</li>
+							<li class="help"><a href="#">Help</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!--allMenu-->
+
+
+
+
+			<section class="mainImg">
+				<h3 class="skip">메인배너이미지</h3>
+				<div class="mainImg_divWrap">
+					<div>
+						<img src="images/mainImg_1.png" alt="스키" width="100%" height="100%">
+					</div>
+					<div>
+						<img src="images/mainImg_2.png" alt="클라이밍" width="100%" height="100%">
+					</div>
+					<div>
+						<img src="images/mainImg_3.png" alt="트레일러닝" width="100%" height="100%">
+					</div>
+					<div>
+						<img src="images/mainImg_4.png" alt="서핑" width="100%" height="100%">
+					</div>
+					<div>
+						<img src="images/mainImg_5.png" alt="플라잉낚시" width="100%" height="100%">
+					</div>
+				</div>
+
+				<p>WHAT’S<br/>THE NATURAL<br/>PROGRESSION?</p>
+			</section>
+
+
+		
+		<div class="dim"></div>
+
+
+
+
+
+
+
+
+
+
+	<div id="containerWrap">
+
+		<section class="campaign">
+			<!--팝업-->
+
+			<article class="campaign_1">
+				<dl class="campaign_1_dl">
+					<dt><a href="#">"파타고니아는 자연을 사랑합니다"</a></dt>
+					<dd><a href="#">지구와 인간을 병들게 하는 <br />일회용 플라스틱 사용 습관을 한 번쯤 다시 생각해보자는<br /> 뜻을 담은 파타고니아 캠페인에 동참하세요!</a></dd>
+				</dl>
+
+				<p class="campaign_1_more"><a href="#">LEARN MORE</a></p>
+
+				<div class="tabBtn">
+					<span class="campaign_tab_on"><a href="#"><img src="images/main_tab_on_1.png" alt=""></a></span>
+					<span class="campaign_tab_off"><a href="#"><img src="images/main_tab_off.png" alt=""></a></span>
+				</div>
+			</article>
+
+			<article class="campaign_2">
+				<dl class="campaign_2_dl">
+					<dt><a href="#"><strong>"DON'T BUY <br /> THIS JACKET"</strong><br />제발 이 자켓을 사지 마세요!</a></dt>
+					<dd><a href="#"><strong>"오래 입은 옷"</strong><br />
+							사람들이 옷과 맺는 관계를 바꿔나가기 위해, <br />파타고니아는 [오래 입은 옷] 캠페인을 벌이고 있습니다. <br />오래입은 파타고니아 옷이 있으신가요? <br />물건을 오래 사용하는 것이 지구를 지키는 길입니다.</a></dd>
+				</dl>
+				<p class="wornwear"><a href="#"><img src="images/wornwearlogo.png" alt="wornwear 홈페이지로 이동"></a></p>
+				<p class="campaign_2_more"><a href="">LEARN MORE</a></p>
+
+				<div class="tabBtn">
+					<span class="campaign_tab_on"><a href="#"><img src="images/main_tab_on_2.png" alt=""></a></span>
+					<span class="campaign_tab_off"><a href="#"><img src="images/main_tab_off.png" alt=""></a></span>
+
+				</div>
+			</article>
+
+		</section>
+		<!--campaign-->
+
+
+		<section class="container1_category">
+			<h2 class="skip">Category</h2>
+			<ul>
+				<li class="Essentials"><a href="#">Patagonia Essentials</a></li>
+				<li class="mens"><a href="#">Men's</a></li>
+				<li class="womens"><a href="#">Women's</a></li>
+				<li class="kids"><a href="#">Kids' / Baby</a></li>
+				<li class="packs"><a href="#">Packs / Gear</a></li>
+			</ul>
+		</section>
+		<!--container1_category-->
+
+
+		<section class="container2_bestSelling">
+			<h2>Best Selling</h2>
+			<p class="more"><a href="#">더보기</a></p>
+
+			<div class="bestSelling_1">
+			<div class="bestSelling_1_item"> 
+				<p class="bestProductImg"><a href="#"><img src="images/bestselling_1.png" alt="Canvas Chore Vest" width="173px" height="175"></a></p>
+
+				<ul>
+					<li><a href="#">Men's </a></li>
+					<li><a href="#">Canvas Chore Vest </a></li>
+					<li><a href="#">￦229,000 </a></li>
+				</ul>
+
+				<p class="colorChips">
+					<a href="#"><img src="images/colorchip_1.png" alt="카키색"></a>
+					<a href="#"><img src="images/colorchip_2.png" alt="베이지색"></a>
+				</p>
+				<div class="cart_shop_btn">
+					<span class="addCart"><a href="#">Add to Cart</a></span>
+					<span class="shop"><a href="#">Shop</a></span>
+				</div>
+			</div>
+			</div><!--bestSelling_1-->
+
+			<div class="bestSelling_2">
+			<div class="bestSelling_1_item"> 
+				<p class="bestProductImg"><a href="#"><img src="images/bestselling_2.png" alt="우먼즈 R1 풀-집 후디" width="173px" height="175"></a></p>
+
+				<ul>
+					<li><a href="#">Womens </a></li>
+					<li><a href="#">R1 Full-Zip Hooddy</a></li>
+					<li><a href="#">￦229,000 </a></li>
+				</ul>
+
+				<p class="colorChips">
+					<a href="#"><img src="images/colorchip_3.png" alt="청록색"></a>
+					<a href="#"><img src="images/colorchip_4.png" alt="와인색"></a>
+					<a href="#"><img src="images/colorchip_5.png" alt="짙은회색"></a>
+				</p>
+
+				<div class="cart_shop_btn">
+					<span class="addCart"><a href="#">Add to Cart</a></span>
+					<span class="shop"><a href="#">Shop</a></span>
+				</div>
+			</div>
+			</div>
+
+		</section>
+		<!--container2_bestSelling-->
+
+
+		<section class="container3_newArrivals">
+			<h2>NEW Arrivals</h2><!--css에 class on off 줘서 -->
+
+			<section class="newArrivals_1 on">
+				<h3 class="skip">NEW Arrivals 1</h3>
+				<p class="newColor">NEW COLOR</p>
+
+				<p class="newProductImg"><a href="#"><img src="images/newarrival_1.png" alt="Canvas Chore Vest" width="286px"></a></p>
+
+				<ul>
+					<li class="newArrivals_1_bedge"> <a href="#">Men's</a></li>
+					<li class="newArrivals_1_product"> <a href="#">Woolie Fleece Jkt</a></li>
+					<li class="newArrivals_1_price"> <a href="#">￦239,000</a></li>
+				</ul>
+
+				<p class="colorChips">
+					<a href="#"><img src="images/colorchip_1.png" alt="카키색" width="20px" height="20px"></a>
+					<a href="#"><img src="images/colorchip_7.png" alt="베이지색" width="20px" height="20px"></a>
+				</p>
+
+				<p class="shop"><a href="#">Shop</a></p>
+				<p class="nextBtn"><a href="#"><img src="images/newarrival_next.png" alt="이전보기"></a></p>
+				<p class="prevBtn"><a href="#"><img src="images/newarrival_prev.png" alt="다음보기"></a></p>
+
+			</section>
+			<!--newArrivals_1-->
+
+			<section class="newArrivals_2">
+				<h3 class="skip">NEW Arrivals 2</h3>
+				<p class="newColor">NEW COLOR</p>
+
+				<p class="newProductImg"><a href="#"><img src="images/newarrival_2.png" alt="woolie hoodie" width="260px"></a></p>
+
+				<ul>
+					<li> <a href="#">Women's </a></li>
+					<li> <a href="#">woolie Fleece Jkt </a></li>
+					<li> <a href="#">￦239,000</a></li>
+				</ul>
+
+			</section>
+			<!--newArrivals_2-->
+
+
+			<section class="newArrivals_3">
+				<h3 class="skip">NEW Arrivals 3</h3>
+				<p class="newColor">NEW COLOR</p>
+
+				<p class="newProductImg"><a href="#"><img src="images/newarrival_3.png" alt="woolie hoodie" width="260px"></a></p>
+
+				<ul>
+					<li><a href="#">Women's</a></li>
+					<li><a href="#">woolie Fleece Jkt</a></li>
+					<li> <a href="#">￦239,000</a></li>
+				</ul>
+
+			</section>
+			<!--newArrivals_3-->
+
+		</section>
+		<!--container3_newArrivals-->
+
+
+		<section class="container4_sports">
+			<h2>SPORTS</h2>
+			<div class="sports_menu">
+				<ul class="sports_ul_1">
+					<li><a href="#">Ski / Snowboard</a>
+						<ul class="sports_ul_2">
+							<li><a href="#">SHOP</a></li>
+							<li><a href="#">Videos</a></li>
+							<li><a href="#">Ambassadors</a></li>
+							<li class="featured_li ski"><a href="#">Featured</a>
+								<dl class="featured_dl ">
+									<dt>The Powder Bowl Jacket</dt>
+									<dd><strong>WHY Waste IT?</strong><br />100% 재활용 GORE-TEX로 만든 자켓을 만나보세요!</dd>
+								</dl>
+							</li>
+						</ul>
+					</li>
+
+
+					<li><a href="#">Surfing</a>
+						<ul class="sports_ul_2">
+							<li><a href="#">SHOP</a></li>
+							<li><a href="#">Videos</a></li>
+							<li><a href="#">Ambassa dors</a></li>
+							<li class="featured_li surfing"><a href="#">Featured</a>
+								<dl class="featured_dl ">
+									<dt>R1® Lite Full Suit</dt>
+									<dd>Offering lightweight
+										comfort in warmer water,
+										the stretchy, neoprene-free
+										R1® Lite Yulex® Front-Zip
+										Short-Sleeved Full Suit</dd>
+								</dl>
+							</li>
+						</ul>
+					</li>
+
+
+					<li><a href="#">Climbing</a>
+						<ul class="sports_ul_2">
+							<li><a href="#">SHOP</a></li>
+							<li><a href="#">Videos</a></li>
+							<li><a href="#">Ambassadors</a></li>
+							<li class="featured_li climbing"><a href="#">Featured</a>
+								<dl class="featured_dl ">
+									<dt>Done in an R1</dt>
+									<dd>What have you done
+										in an R1?
+										“Tommy and
+										the Dawn Wall.”
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</li>
+
+
+					<li><a href="#">Trail Running</a>
+						<ul class="sports_ul_2">
+							<li><a href="#">SHOP</a></li>
+							<li><a href="#">Videos</a></li>
+							<li><a href="#">Ambassadors</a></li>
+							<li class="featured_li running"><a href="#">Featured</a>
+								<dl class="featured_dl ">
+									<dt>Shell Jackets</dt>
+									<dd>Our climbing shells are
+										built to be pliable,
+										lightweight and protective
+										for everything from mild
+										rain to unpredictable alpine
+										conditions.</dd>
+								</dl>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!--container4_sports-->
+
+	</div>
+	<!--containerWrap-->
+
+
+
+
+
+	<div id="footerWrap">
+		<footer class="footer">
+			<section class="footer_menu">
+				<ul class="footer_menu_1">
+					<li><a href="#">기업의 사회적 책임</a></li>
+					<li><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">고객센터</a></li>
+				</ul>
+				<ul class="footer_menu_2">
+					<li><a href="#">매장정보</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">이벤트</a></li>
+				</ul>
+			</section>
+			<article class="snsIcon">
+				<h3 class="skip">SNS Link</h3>
+				<a href="#"><img src="images/footer_sns_1.png" alt="페이스북"></a>
+				<a href="#"><img src="images/footer_sns_1.png" alt="인스타그램"></a>
+				<a href="#"><img src="images/footer_sns_1.png" alt="유투브"></a>
+				<a href="#"><img src="images/footer_sns_1.png" alt="vimeo"></a>
+			</article>
+
+			<div class="footer_text">
+				<h3>(주)파타고니아</h3>
+				<address>서울특별시 강남구 삼성로 122길 25 파타고니아코리아</address>
+				<p>온라인쇼핑몰문의:02-6196-4096<br />AS문의:1544-1876 (내선번호 2번)</p>
+
+				<span class="ceo">대표:존패트릭콜린스</span>
+				<span>개인정보보호책임자: 이진섭</span>
+
+				<p>사업자등록번호:220-88-66550<br />
+					patagoniakorea@patagonia.kr</p>
+
+			</div>
+
+			<span><a href="#"><img src="images/footer_logo.png" alt=""></a></span>
+
+		</footer>
+	</div>
+	<!--footerWrap-->
+
+
+</body>
+
+</html>
