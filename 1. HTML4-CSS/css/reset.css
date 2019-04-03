@@ -1,0 +1,121 @@
+@charset "utf-8";
+@import url(link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Gothic&amp;subset=korean" rel="stylesheet");
+
+
+body,
+div,
+form,
+fieldset,
+legend,
+input,
+a,
+h1,
+ul,
+li,
+label,
+select,
+option,
+h3,
+h4,
+span,
+address,
+p,
+dl,
+dt,
+dd {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 13px;
+	color: #000;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover,
+a:active,
+a:focus {
+	font-weight:900;
+	color: #000;
+}
+
+
+fieldset {
+	border: none;
+}
+
+.skip,
+legend,
+caption {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+ul {
+	list-style: none;
+}
+
+label,
+legend {
+	display: none;
+}
+
+#skipMenu {
+	position: absolute;
+	z-index: 999;
+	width: 100%;
+}
+
+#skipMenu a {
+	position: absolute;
+	top: -150px;
+}
+
+/*화면 위로 숨김*/
+#skipMenu a:hover,
+#skipMenu a:active,
+#skipMenu a:focus {
+	position: absolute;
+	top: -20px;
+	background: #333;
+	color: #fff;
+	padding: 10px 0;
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+img {
+	border: none;
+}
+
+address {
+	text-decoration: none;
+}
+
+input {
+	border: none;
+}
+
+input,
+select,
+img {
+	vertical-align: middle
+}
+
+.on{display: block;}
+.off{display: none;}
